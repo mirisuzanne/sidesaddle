@@ -1,0 +1,5 @@
+# Default application configuration that all configurations inherit from
+# see https://github.com/causes/scss-lint/blob/master/config/default.yml
+# ----------------------------------------------------------------------
+
+scss_files: "scss/**/*.scss"

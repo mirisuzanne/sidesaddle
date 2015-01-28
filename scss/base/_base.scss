@@ -1,0 +1,22 @@
+// Base
+// ====
+
+@import 'license.config';
+@import 'requirements.config';
+@import 'colors.config';
+@import 'fonts.config';
+
+@include fonts;
+@include global-box-sizing;
+
+html {
+  @extend %body;
+  @include baseline;
+  background: color(text);
+  color: color(text);
+}
+
+html,
+body {
+  height: 100%;
+}

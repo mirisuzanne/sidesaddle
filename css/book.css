@@ -1,0 +1,165 @@
+/*!
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      FontSite Inc.
+ * License URL: http://www.fontspring.com/licenses/fontsite/webfont
+ *
+ *
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+@font-face {
+  font-family: 'franklin';
+  font-style: normal;
+  font-weight: normal;
+  
+  src: url('../fonts/franklin/franklingothic-regular-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-regular-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-regular-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'franklin';
+  font-style: normal;
+  font-weight: bold;
+  
+  src: url('../fonts/franklin/franklingothic-bold-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bold-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bold-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'franklin';
+  font-style: italic;
+  font-weight: normal;
+  
+  src: url('../fonts/franklin/franklingothic-italic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-italic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-italic-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'franklin';
+  font-style: italic;
+  font-weight: bold;
+  
+  src: url('../fonts/franklin/franklingothic-bolditalic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bolditalic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bolditalic-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'rockingham';
+  font-style: normal;
+  font-weight: normal;
+  
+  src: url('../fonts/rockingham/rockingham-regular-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-regular-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-regular-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'rockingham';
+  font-style: normal;
+  font-weight: bold;
+  
+  src: url('../fonts/rockingham/rockingham-bold-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-bold-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-bold-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'rockingham';
+  font-style: italic;
+  font-weight: normal;
+  
+  src: url('../fonts/rockingham/rockingham-italic-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-italic-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-italic-webfont.ttf') format('truetype'); }
+
+@font-face {
+  font-family: 'rockingham';
+  font-style: italic;
+  font-weight: bold;
+  
+  src: url('../fonts/rockingham/rockingham-bolditalic-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-bolditalic-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-bolditalic-webfont.ttf') format('truetype'); }
+
+html {
+  font-family: 'rockingham', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+  background: #000;
+  color: #000; }
+
+html, body {
+  height: 100%; }
+
+.splash {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url('../images/cover.jpg') no-repeat fixed right;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .splash body {
+    background: rgba(255, 255, 255, 0.85);
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff; }
+  .splash h1 {
+    color: #f00;
+    font-size: 8vmin;
+    line-height: 8vmin;
+    margin: 0; }
+  .splash p {
+    margin: 0; }
+  .splash a:link, .splash a:visited {
+    color: #000;
+    font-weight: bold; }
+  .splash a:hover, .splash a:focus, .splash a:active {
+    color: #f00; }
+
+
+/*# sourceMappingURL=book.css.map */

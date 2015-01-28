@@ -1,0 +1,45 @@
+// Fonts
+// =====
+
+$font-formats: 'woff2' 'woff' 'ttf';
+
+$fonts: (
+  display: (
+    name: 'franklin',
+    path: 'franklin/franklingothic-%s%s-webfont',
+    styles: (regular, bold, italic, bold italic),
+    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  ),
+
+  body: (
+    name: 'rockingham',
+    path: 'rockingham/rockingham-%s%s-webfont',
+    styles: (regular, bold, italic, bold italic),
+    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  ),
+);
+
+
+@mixin fonts(
+  $fonts: $fonts
+) {
+  @each $font, $detail in $fonts {
+    $name: map-get($detail, name);
+
+    @each $styles in map-get($detail, styles) {
+
+      $path-keys: if(length($styles) == 1, $styles null, $styles);
+      $path: interpolate(map-get($detail, path), $path-keys...);
+
+      $styles: if($styles == 'regular', 'normal', $styles);
+      $styles: if(length($styles) == 1, $styles normal, $styles);
+
+      @include font-face(join($name $path, $styles));
+
+    }
+
+    %#{$font} {
+      font-family: $name, map-get($detail, stack);
+    }
+  }
+}
