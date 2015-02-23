@@ -4,7 +4,7 @@
 $font-formats: 'woff2' 'woff' 'ttf';
 
 $fonts: (
-  display: (
+  boilerplate: (
     name: 'franklin',
     path: 'franklin/franklingothic-%s%s-webfont',
     styles: (regular, bold, italic, bold italic),

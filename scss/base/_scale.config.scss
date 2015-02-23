@@ -1,0 +1,23 @@
+// Scale
+// =====
+
+$base-size: 18px;
+
+$ratio: fourth;
+
+$sizes: (
+  normal: 18px,
+  rhythm: 1,
+
+  h1: 4,
+  h2: 3,
+  h3: 2,
+
+  small: -1,
+
+  gutter: rhythm,
+  spacer: 3,
+  shim: -2,
+
+  corners: shim,
+);

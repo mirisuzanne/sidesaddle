@@ -4,6 +4,7 @@
 @import 'license.config';
 @import 'requirements.config';
 @import 'colors.config';
+@import 'scale.config';
 @import 'fonts.config';
 
 @include fonts;
@@ -12,11 +13,31 @@
 html {
   @extend %body;
   @include baseline;
-  background: color(text);
+  background: color(background);
   color: color(text);
+
+  @include at(44em) {
+    background: url('../images/cover.jpg') no-repeat fixed top right;
+    background-size: cover;
+  }
 }
 
 html,
 body {
   height: 100%;
+}
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+a {
+  #{$link} {
+    color: currentColor;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #{$focus} {
+    color: color(action);
+  }
 }

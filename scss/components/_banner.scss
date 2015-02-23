@@ -1,0 +1,56 @@
+// Banner
+// ======
+
+[role='banner'] {
+  @include micro-clearfix;
+  background: color(overlay);
+  padding: 0 size(shim);
+
+  .h-card {
+    @extend %boilerplate;
+    @include font-size(small);
+    padding: size(shim);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include at(44em) {
+      float: right;
+    }
+  }
+
+  a {
+    #{$link} {
+      color: color(action);
+      font-weight: inherit;
+    }
+
+    #{$focus} {
+      color: color(focus);
+    }
+  }
+}
+
+
+// Title
+// -----
+
+.title {
+  text-align: center;
+
+  i {
+    color: color(light);
+    font-variant: small-caps;
+  }
+
+  @include at(44em) {
+    float: left;
+    text-align: left;
+  }
+}
+
+[rel="home"] {
+  #{$link} {
+    display: inline-block;
+    padding: size(shim);
+  }
+}
