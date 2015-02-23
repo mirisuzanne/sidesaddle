@@ -202,7 +202,10 @@ a:hover, a:focus, a:active {
       content: '— '; }
 
 .release {
-  padding: 1.33333rem 0;
+  border-left: #c00 solid 0.55556rem;
+  margin-bottom: 1.33333rem;
+  margin-left: -0.55556rem;
+  padding: 1.33333rem 0.55556rem;
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 1px 1px 0 #fff, -1px -1px 0 #fff; }
   .release [href*='teacupgorilla']:link, .release [href*='teacupgorilla']:visited {
     font-size: 3.16667rem;

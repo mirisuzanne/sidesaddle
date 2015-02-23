@@ -59,7 +59,10 @@
 // -------
 
 .release {
-  padding: size(gutter) 0;
+  border-left: color(brand) solid size(shim);
+  margin-bottom: size(gutter);
+  margin-left: - size(shim);
+  padding: size(gutter) size(shim);
   text-shadow: 0 1px 0 color(background),
                0 -1px 0 color(background),
                1px 0 0 color(background),
