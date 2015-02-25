@@ -151,8 +151,6 @@ a:hover, a:focus, a:active {
       padding: 25vh 1.33333rem; } }
 
 h1 {
-  font-size: 3.16667rem;
-  line-height: 3.33333rem;
   font-size: 9vw;
   line-height: 12vw;
   color: #c00; }
@@ -174,8 +172,6 @@ h1 {
 .release {
   position: relative; }
   .release .p-name {
-    font-size: 2.38889rem;
-    line-height: 2.66667rem;
     font-size: 6vw;
     line-height: 8vw;
     margin-bottom: 0.66667rem; }
@@ -190,8 +186,6 @@ h1 {
     font-weight: bold; }
 
 .call-to-action {
-  font-size: 1.77778rem;
-  line-height: 2rem;
   font-size: 5vw;
   line-height: 6.66667vw;
   background: #fff;
@@ -215,8 +209,6 @@ h1 {
 .presenters {
   font-variant: small-caps; }
   .presenters a:link, .presenters a:visited {
-    font-size: 3.16667rem;
-    line-height: 3.33333rem;
     font-size: 9vw;
     line-height: 12vw; }
     @media (min-width: 39.58333em) {
@@ -234,8 +226,6 @@ h1 {
     font-weight: bold; }
 
 .pullquote {
-  font-size: 1.33333rem;
-  line-height: 2rem;
   font-size: 4vw;
   line-height: 5.33333vw;
   background: #fff;
@@ -301,8 +291,6 @@ h1 {
   margin-top: 2.66667rem; }
 
 .blurb-body {
-  font-size: 1.77778rem;
-  line-height: 2rem;
   font-size: 5vw;
   line-height: 6.66667vw;
   font-style: italic;

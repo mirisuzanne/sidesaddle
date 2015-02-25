@@ -35,7 +35,6 @@ $sizes: map-merge($sizes, $meta-sizes);
   $lines: false,
   $edge: min-width
 ) {
-  @include font-size($fixed, $lines);
   font-size: $relative;
   line-height: $relative * $ratio;
 
