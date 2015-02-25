@@ -5,13 +5,13 @@
   {% block htmlhead %}
 
   <!-- Page Info -->
-  <title>{% block title %}Riding SideSaddle*{% endblock %}</title>
-  <meta name="description" content="{% block description %}Multimedia arts collective with post-rock tendencies.{% endblock description %}" />
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
 
   <!-- Site Info -->
   {% block robots %}<meta name="robots" content="index, follow" />{% endblock %}
-  <meta name="author" content="Eric M Suzanne" />
-  <meta name="keywords" content="novel, art, music, non-linear, writing, elit" />
+  <meta name="author" content="{{ config.author_full }}" />
+  <meta name="keywords" content="{{ config.keywords }}" />
   <meta name="language" content="en-us" />
 
   <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
