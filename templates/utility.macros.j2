@@ -1,0 +1,10 @@
+{% macro is_hidden(text) %}
+  <span class="is-hidden">{{ text }}</span>
+{% endmacro %}
+
+{% macro icon(name, alt=none, is_hidden=none) %}
+  <svg data-icon="{{ name }}"><use xlink:href="#icon-{{ name }}" /></svg>
+  {% if alt %}
+    <span class="icon-text{% if is_hidden %} is-hidden{% endif %}">{{ alt }}</span>
+  {% endif %}
+{% endmacro %}

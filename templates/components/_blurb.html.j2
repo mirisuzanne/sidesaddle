@@ -1,0 +1,38 @@
+<!-- Book Blurbs -->
+
+{% if config.blurbs %}
+<article class="blurbs">
+{% for blurb in blurbs %}
+
+  <figure class="blurb">
+    <blockquote class="blurb-body">
+      {{ blurb.body }}
+    </blockquote>
+
+    <figcaption class="h-card">
+      {% if blurb.cite %}
+        {% if blurb.cite_url %}
+          <a href="{{ blurb.cite_url }}" class="p-name">
+            {{ blurb.cite }}
+          </a>{% if blurb.org %},{% endif %}
+        {% else %}
+          <span class="p-name">
+            {{ blurb.cite }}
+          </span>{% if blurb.org %},{% endif %}
+        {% endif %}
+      {% endif %}
+
+      {% if blurb.org %}
+        {% if blurb.org_url %}
+          <a href="{{ blurb.org_url }}" class="p-org">{{ blurb.org }}</a>
+        {% else %}
+          <span class="p-org">{{ blurb.org }}</span>
+        {% endif %}
+      {% endif %}
+    </figcaption>
+  </figure>
+
+{% endfor %}
+</article>
+{% endif %}
+

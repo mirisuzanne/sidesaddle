@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block template %}
+<main role="main">
+  {% block body %}{% endblock %}
+</main>
+
+<footer role="contentinfo">
+  <p class="copyright">
+    <strong>Riding SideSaddle*</strong>
+    © {{ config.copyright }}
+    <a href="http://ericsuzanne.com">
+      Eric M Suzanne
+    </a>
+    |
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+      some rights reserved
+    </a>
+  </p>
+
+  <p class="publisher">
+    Published by
+    <a href="http://springgunpress.com">
+      SpringGun Press
+    </a>
+    and distributed to the trade by
+    <a href="http://spdbooks.org">
+      Small Press Distribution
+    </a>
+  </p>
+</footer>
+{% endblock %}

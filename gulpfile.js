@@ -10,13 +10,37 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var paths = {
   SASS_DIR: 'scss/',
-  CSS_DIR: 'css/',
+  CSS_DIR: 'content/static/css/',
 
   init: function () {
     this.SASS = this.SASS_DIR + '**/*.scss';
     return this;
   }
 }.init();
+
+var spawned = [];
+process.on('exit', function () {
+  spawned.forEach(function (p) {
+    p.kill();
+  });
+});
+
+// Execute a command, logging output live while process runs
+var spawnTask = function (command, args, cb) {
+  spawned.push(
+    spawn(command, args, {stdio: 'inherit'})
+      .on('error', function (err) {
+        cb(err);
+        gutil.beep();
+      })
+      .on('exit', cb)
+  );
+};
+
+gulp.task('default', [
+  'runserver',
+  'watch'
+]);
 
 gulp.task('watch', function () {
   // lint and compile scss
@@ -40,4 +64,8 @@ gulp.task('scsslint', function () {
     .pipe(scsslint('.scss-lint.yml'))
     .pipe(scsslint.reporter())
     .pipe(scsslint.reporter('fail'));
+});
+
+gulp.task('runserver', function (cb) {
+  spawnTask('make serve', [], cb);
 });

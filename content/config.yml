@@ -1,0 +1,27 @@
+---
+# blurbs
+blurbs:
+  - cite: 'Erin Rollman & Brian Colona'
+    org: 'Buntport Theatre'
+    org_url: 'http://buntport.com/'
+    body: "A really, really good reading time! Eric has gathered all of the beauteous, ugly, and necessary parts together in one place. Graciously, he leaves us the pleasure of assembly without rules."
+
+  - cite: 'Chris Eppstein'
+    org: 'Sass Core Developer'
+    org_url: 'http://sass-lang.com/'
+    body: "Rarely do you get to experience intimate thoughts like these. It's like being dropped into someone's head, Quantum Leap style, for a transformative time in their life. I won't deny, it definitely turned me on."
+
+
+# defaults
+author: eric
+copyright: 2015
+
+
+# Site Config
+active_modules: [blog, typogrify, author, wrap]
+canonical_url: http://ridingsidesaddle.net/
+output_folder: ../../sidesaddle-pages
+template_path: ../templates
+modules:
+  blog:
+    index_url: /blog/

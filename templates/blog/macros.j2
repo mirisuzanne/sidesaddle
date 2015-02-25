@@ -1,0 +1,42 @@
+{% macro list(post) %}
+<article class="post">
+  {% if post.title %}
+    <h2 class="title">
+      <a href="{{ link_to('page', slug=post.slug) }}">
+        {{ post.title }}
+      </a>
+    </h2>
+  {% endif %}
+
+  {{ byline(post) }}
+
+  <div class="body">
+    {% if post.summary %}
+      {{ post.render_summary() }}
+      <a href="{{ link_to('page', slug=post.slug) }}" class="more-link">
+        read more »
+      </a>
+    {% else %}
+      {{ post.render_contents() }}
+    {% endif %}
+  </div>
+</article>
+{% endmacro %}
+
+{% macro byline(post) %}
+{% if post.pub_date %}
+<div class="byline">
+  {% if post.pub_date %}
+  <time datetime="{{ post.pub_date.isoformat() }}" pubdate="pubdate">
+    {{ post.pub_date.strftime("%B %d, %Y") }}
+  </time>
+  {% endif %}
+
+  {% if post.author %}
+  <span class="vcard">
+    by <a href="{{ link_to('author', author=post.author) }}" class="fn">{{ post.author }}</a>
+  </span>
+  {% endif %}
+</div>
+{% endif %}
+{% endmacro %}
