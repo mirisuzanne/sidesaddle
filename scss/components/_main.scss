@@ -9,6 +9,7 @@
   margin: 0 auto;
   max-width: 45rem;
   padding: size(gutter)*4 size(gutter);
+  transition: all 300ms;
 
   @include at(45em) {
     padding: 25vh size(gutter);
@@ -16,7 +17,7 @@
 }
 
 h1 {
-  @include font-size(h1);
+  @include relative-font(9vw, h1);
   color: color(brand);
 }
 
@@ -45,7 +46,7 @@ h1 {
   position: relative;
 
   .p-name {
-    @include font-size(h2);
+    @include relative-font(6vw, h2);
     margin-bottom: size(shim);
   }
 
@@ -62,7 +63,7 @@ h1 {
 }
 
 .call-to-action {
-  @include font-size(h3);
+  @include relative-font(5vw, h3);
   background: color(background);
   border: 2px solid color(brand);
   font-weight: bold;
@@ -71,6 +72,7 @@ h1 {
   position: absolute;
   top: 0;
   transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
+  white-space: nowrap;
 }
 
 .p-summary {
@@ -82,7 +84,7 @@ h1 {
 
   a {
     #{$link} {
-      @include font-size(h1);
+      @include relative-font(9vw, h1);
     }
   }
 }
@@ -105,6 +107,7 @@ h1 {
 }
 
 .pullquote {
+  @include relative-font(4vw, 24px, 1.5);
   background: color(background);
   border: 1px solid color(light);
   box-shadow: 1px 1px 6px color(light);
@@ -112,10 +115,6 @@ h1 {
   margin-bottom: size(gutter);
   padding-bottom: percentage(3/5);
   position: relative;
-
-  @include at(30rem) {
-    @include font-size(24px, 1.5);
-  }
 
   @include wrap-content(' ') {
     @include stretch;
@@ -172,15 +171,16 @@ h1 {
 }
 
 .blurb-body {
-  @include font-size(h3);
+  @include relative-font(5vw, h3);
   font-style: italic;
   margin-bottom: size(half-shim);
 
   .open,
   .close {
-    @include font-size(h2, 1);
     color: color(brand);
+    font-size: size(h2);
     font-weight: bold;
+    line-height: .25;
   }
 
   .open {

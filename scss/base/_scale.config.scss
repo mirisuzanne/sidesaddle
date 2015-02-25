@@ -3,7 +3,7 @@
 
 $base-size: 18px;
 
-$ratio: fourth;
+$ratio: (4/3);
 
 $sizes: (
   normal: 18px,
@@ -27,3 +27,21 @@ $meta-sizes: (
 );
 
 $sizes: map-merge($sizes, $meta-sizes);
+
+
+@mixin relative-font(
+  $relative,
+  $fixed,
+  $lines: false,
+  $edge: min-width
+) {
+  @include font-size($fixed, $lines);
+  font-size: $relative;
+  line-height: $relative * $ratio;
+
+  $context: size($fixed, px) / ($relative / 100vw) / 16px + 'em';
+
+  @include at($edge $context) {
+    @include font-size($fixed, $lines);
+  }
+}
