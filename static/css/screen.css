@@ -144,15 +144,20 @@ a:hover, a:focus, a:active {
 .section-inner {
   margin: 0 auto;
   max-width: 45rem;
-  padding: 5.33333rem 1.33333rem; }
+  padding: 5.33333rem 1.33333rem;
+  transition: all 300ms; }
   @media (min-width: 45em) {
     .section-inner {
       padding: 25vh 1.33333rem; } }
 
 h1 {
-  font-size: 3.16667rem;
-  line-height: 3.33333rem;
+  font-size: 9vw;
+  line-height: 12vw;
   color: #c00; }
+  @media (min-width: 39.58333em) {
+    h1 {
+      font-size: 3.16667rem;
+      line-height: 3.33333rem; } }
 
 @media (min-width: 45em) {
   [data-location='home'] .page {
@@ -167,9 +172,13 @@ h1 {
 .release {
   position: relative; }
   .release .p-name {
-    font-size: 2.38889rem;
-    line-height: 2.66667rem;
+    font-size: 6vw;
+    line-height: 8vw;
     margin-bottom: 0.66667rem; }
+    @media (min-width: 44.79167em) {
+      .release .p-name {
+        font-size: 2.38889rem;
+        line-height: 2.66667rem; } }
   .release .sub {
     font-variant: small-caps; }
   .release a:link, .release a:visited {
@@ -177,8 +186,8 @@ h1 {
     font-weight: bold; }
 
 .call-to-action {
-  font-size: 1.77778rem;
-  line-height: 2rem;
+  font-size: 5vw;
+  line-height: 6.66667vw;
   background: #fff;
   border: 2px solid #c00;
   font-weight: bold;
@@ -187,7 +196,12 @@ h1 {
   position: absolute;
   top: 0;
   -webkit-transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
-  transform: rotate(-.5deg) translate3d(-50%, -50%, 0); }
+  transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
+  white-space: nowrap; }
+  @media (min-width: 40em) {
+    .call-to-action {
+      font-size: 1.77778rem;
+      line-height: 2rem; } }
 
 .p-summary {
   font-variant: small-caps; }
@@ -195,8 +209,12 @@ h1 {
 .presenters {
   font-variant: small-caps; }
   .presenters a:link, .presenters a:visited {
-    font-size: 3.16667rem;
-    line-height: 3.33333rem; }
+    font-size: 9vw;
+    line-height: 12vw; }
+    @media (min-width: 39.58333em) {
+      .presenters a:link, .presenters a:visited {
+        font-size: 3.16667rem;
+        line-height: 3.33333rem; } }
 
 .event-details {
   list-style: disc;
@@ -208,6 +226,8 @@ h1 {
     font-weight: bold; }
 
 .pullquote {
+  font-size: 4vw;
+  line-height: 5.33333vw;
   background: #fff;
   border: 1px solid #666666;
   box-shadow: 1px 1px 6px #666666;
@@ -215,7 +235,7 @@ h1 {
   margin-bottom: 1.33333rem;
   padding-bottom: 60%;
   position: relative; }
-  @media (min-width: 30rem) {
+  @media (min-width: 37.5em) {
     .pullquote {
       font-size: 1.33333rem;
       line-height: 2rem; } }
@@ -271,15 +291,19 @@ h1 {
   margin-top: 2.66667rem; }
 
 .blurb-body {
-  font-size: 1.77778rem;
-  line-height: 2rem;
+  font-size: 5vw;
+  line-height: 6.66667vw;
   font-style: italic;
   margin-bottom: 0.33333rem; }
+  @media (min-width: 40em) {
+    .blurb-body {
+      font-size: 1.77778rem;
+      line-height: 2rem; } }
   .blurb-body .open, .blurb-body .close {
-    font-size: 2.38889rem;
-    line-height: 1.33333rem;
     color: #c00;
-    font-weight: bold; }
+    font-size: 2.38889rem;
+    font-weight: bold;
+    line-height: .25; }
   .blurb-body .open {
     display: inline-block;
     margin-left: -1.33333rem;
