@@ -42,11 +42,10 @@ h1 {
 // -------
 
 .release {
-  font-variant: small-caps;
+  position: relative;
 
   .p-name {
     @include font-size(h2);
-    font-variant: normal;
     margin-bottom: size(shim);
   }
 
@@ -62,7 +61,25 @@ h1 {
   }
 }
 
+.call-to-action {
+  @include font-size(h3);
+  background: color(background);
+  border: 2px solid color(brand);
+  font-weight: bold;
+  left: 50%;
+  padding: size(gutter);
+  position: absolute;
+  top: 0;
+  transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
+}
+
+.p-summary {
+  font-variant: small-caps;
+}
+
 .presenters {
+  font-variant: small-caps;
+
   a {
     #{$link} {
       @include font-size(h1);
@@ -79,10 +96,18 @@ h1 {
 // intro
 // -----
 
+.intro {
+  overflow: hidden;
+
+  b {
+    font-weight: bold;
+  }
+}
+
 .pullquote {
   background: color(background);
   border: 1px solid color(light);
-  box-shadow: 0 1px 1px color(light);
+  box-shadow: 1px 1px 6px color(light);
   height: 0;
   margin-bottom: size(gutter);
   padding-bottom: percentage(3/5);
@@ -94,19 +119,34 @@ h1 {
 
   @include wrap-content(' ') {
     @include stretch;
-    background: color(background);
+    background: color(background) no-repeat scroll;
+    background-size: 100% auto;
     border: 1px solid color(light);
-    box-shadow: 0 1px 1px color(light);
+    box-shadow: 1px 1px 6px color(light);
+    transition: all 300ms ease-in-out;
     z-index: -1;
   }
 
   &:before {
+    background-image: url('../images/herm.jpg');
     transform: rotate(-1.5deg);
   }
 
   &:after {
+    background-image: url('../images/boxer.jpg');
     transform: rotate(1.5deg);
   }
+
+  &:hover {
+    &:before {
+      transform: rotate(3deg) translate3d(10%, -20%, 0);
+    }
+
+    &:after {
+      transform: rotate(-3deg) translate3d(-10%, -30%, 0);
+    }
+  }
+
 
   p {
     @include stretch;
@@ -115,6 +155,12 @@ h1 {
     justify-content: center;
     padding: 0 15%;
   }
+}
+
+.description {
+  @extend %boilerplate;
+  color: color(light);
+  margin: 0 size(gutter)*2;
 }
 
 
@@ -145,6 +191,7 @@ h1 {
 }
 
 .blurb-cite {
+  @extend %boilerplate;
   color: color(light);
 }
 
@@ -162,6 +209,7 @@ h1 {
   text-transform: uppercase;
 
   strong,
+  b,
   .p-name {
     font-weight: bold;
   }
