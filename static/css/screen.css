@@ -84,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   
   src: url('../fonts/franklin/franklingothic-bolditalic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bolditalic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bolditalic-webfont.ttf') format('truetype'); }
 
-[role='contentinfo'] {
+.description, .blurb-cite, [role='contentinfo'] {
   font-family: 'franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 @font-face {
@@ -159,17 +159,16 @@ h1 {
     background: url('../images/cover.jpg') no-repeat scroll top right;
     background-size: auto 100%; } }
 [data-location='home'] .page em {
-  color: #999999;
+  color: #666666;
   font-variant: small-caps; }
   [data-location='home'] .page em:before {
     content: ' | '; }
 
 .release {
-  font-variant: small-caps; }
+  position: relative; }
   .release .p-name {
     font-size: 2.38889rem;
     line-height: 2.66667rem;
-    font-variant: normal;
     margin-bottom: 0.66667rem; }
   .release .sub {
     font-variant: small-caps; }
@@ -177,18 +176,41 @@ h1 {
     font-variant: normal;
     font-weight: bold; }
 
-.presenters a:link, .presenters a:visited {
-  font-size: 3.16667rem;
-  line-height: 3.33333rem; }
+.call-to-action {
+  font-size: 1.77778rem;
+  line-height: 2rem;
+  background: #fff;
+  border: 2px solid #c00;
+  font-weight: bold;
+  left: 50%;
+  padding: 1.33333rem;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
+  transform: rotate(-.5deg) translate3d(-50%, -50%, 0); }
+
+.p-summary {
+  font-variant: small-caps; }
+
+.presenters {
+  font-variant: small-caps; }
+  .presenters a:link, .presenters a:visited {
+    font-size: 3.16667rem;
+    line-height: 3.33333rem; }
 
 .event-details {
   list-style: disc;
   margin: 0.66667rem 0; }
 
+.intro {
+  overflow: hidden; }
+  .intro b {
+    font-weight: bold; }
+
 .pullquote {
   background: #fff;
-  border: 1px solid #999999;
-  box-shadow: 0 1px 1px #999999;
+  border: 1px solid #666666;
+  box-shadow: 1px 1px 6px #666666;
   height: 0;
   margin-bottom: 1.33333rem;
   padding-bottom: 60%;
@@ -204,16 +226,26 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #fff;
-    border: 1px solid #999999;
-    box-shadow: 0 1px 1px #999999;
+    background: #fff no-repeat scroll;
+    background-size: 100% auto;
+    border: 1px solid #666666;
+    box-shadow: 1px 1px 6px #666666;
+    transition: all 300ms ease-in-out;
     z-index: -1; }
   .pullquote:before {
+    background-image: url('../images/herm.jpg');
     -webkit-transform: rotate(-1.5deg);
     transform: rotate(-1.5deg); }
   .pullquote:after {
+    background-image: url('../images/boxer.jpg');
     -webkit-transform: rotate(1.5deg);
     transform: rotate(1.5deg); }
+  .pullquote:hover:before {
+    -webkit-transform: rotate(3deg) translate3d(10%, -20%, 0);
+    transform: rotate(3deg) translate3d(10%, -20%, 0); }
+  .pullquote:hover:after {
+    -webkit-transform: rotate(-3deg) translate3d(-10%, -30%, 0);
+    transform: rotate(-3deg) translate3d(-10%, -30%, 0); }
   .pullquote p {
     position: absolute;
     top: 0;
@@ -230,6 +262,10 @@ h1 {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 0 15%; }
+
+.description {
+  color: #666666;
+  margin: 0 2.66667rem; }
 
 .blurb + .blurb {
   margin-top: 2.66667rem; }
@@ -250,17 +286,17 @@ h1 {
     width: 1.33333rem; }
 
 .blurb-cite {
-  color: #999999; }
+  color: #666666; }
 
 [role='contentinfo'] {
   font-size: 0.77778rem;
   line-height: 1.33333rem;
-  color: #999999;
+  color: #666666;
   margin: 0 auto;
   max-width: 45rem;
   padding: 2.66667rem 1.33333rem;
   text-transform: uppercase; }
-  [role='contentinfo'] strong, [role='contentinfo'] .p-name {
+  [role='contentinfo'] strong, [role='contentinfo'] b, [role='contentinfo'] .p-name {
     font-weight: bold; }
 
 .publisher a:link, .publisher a:visited {
