@@ -1,2 +1,0 @@
-# ridingsidesaddle.net
-Riding SideSaddle*

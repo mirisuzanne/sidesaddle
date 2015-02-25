@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Web Fonts from fontspring.com
  *
@@ -61,51 +60,59 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: 'franklin';
   font-style: normal;
   font-weight: normal;
+  
   src: url('../fonts/franklin/franklingothic-regular-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-regular-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-regular-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'franklin';
   font-style: normal;
   font-weight: bold;
+  
   src: url('../fonts/franklin/franklingothic-bold-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bold-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bold-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'franklin';
   font-style: italic;
   font-weight: normal;
+  
   src: url('../fonts/franklin/franklingothic-italic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-italic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-italic-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'franklin';
   font-style: italic;
   font-weight: bold;
+  
   src: url('../fonts/franklin/franklingothic-bolditalic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bolditalic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bolditalic-webfont.ttf') format('truetype'); }
 
-[role='banner'] .h-card {
+[role='contentinfo'] {
   font-family: 'franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 @font-face {
   font-family: 'rockingham';
   font-style: normal;
   font-weight: normal;
+  
   src: url('../fonts/rockingham/rockingham-regular-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-regular-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-regular-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'rockingham';
   font-style: normal;
   font-weight: bold;
+  
   src: url('../fonts/rockingham/rockingham-bold-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-bold-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-bold-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'rockingham';
   font-style: italic;
   font-weight: normal;
+  
   src: url('../fonts/rockingham/rockingham-italic-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-italic-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-italic-webfont.ttf') format('truetype'); }
 
 @font-face {
   font-family: 'rockingham';
   font-style: italic;
   font-weight: bold;
+  
   src: url('../fonts/rockingham/rockingham-bolditalic-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-bolditalic-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-bolditalic-webfont.ttf') format('truetype'); }
 
 html {
@@ -118,110 +125,146 @@ html {
   font-size: 112.5%;
   line-height: 1.33333em;
   background: #fff;
-  color: #000; }
-  @media (min-width: 44em) {
-    html {
-      background: url('../images/cover.jpg') no-repeat fixed top right;
-      background-size: cover; } }
+  color: #000;
+  text-shadow: 0 1px 0 #fff; }
 
 html, body {
   height: 100%; }
 
 a:link, a:visited {
-  color: currentColor;
-  font-weight: bold;
+  color: #c00;
   text-decoration: none; }
 a:hover, a:focus, a:active {
+  color: #ad0000;
+  text-decoration: underline; }
+
+.section {
+  border-bottom: 2px dashed #c00; }
+
+.section-inner {
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 5.33333rem 1.33333rem; }
+  @media (min-width: 45em) {
+    .section-inner {
+      padding: 25vh 1.33333rem; } }
+
+h1 {
+  font-size: 3.16667rem;
+  line-height: 3.33333rem;
   color: #c00; }
 
-[role='banner'] {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 0 0.55556rem; }
-  [role='banner']:after {
-    clear: both;
-    content: ' ';
-    display: block; }
-  [role='banner'] .h-card {
-    font-size: 0.77778rem;
-    line-height: 1.33333rem;
-    padding: 0.55556rem;
-    text-align: center;
-    text-transform: uppercase; }
-    @media (min-width: 44em) {
-      [role='banner'] .h-card {
-        float: right; } }
-  [role='banner'] a:link, [role='banner'] a:visited {
-    color: #c00;
-    font-weight: inherit; }
-  [role='banner'] a:hover, [role='banner'] a:focus, [role='banner'] a:active {
-    color: #d83f3f; }
-
-.title {
-  text-align: center; }
-  .title i {
-    color: #999999;
-    font-variant: small-caps; }
-  @media (min-width: 44em) {
-    .title {
-      float: left;
-      text-align: left; } }
-
-[rel="home"]:link, [rel="home"]:visited {
-  display: inline-block;
-  padding: 0.55556rem; }
-
-[role="main"] {
-  max-width: 45rem;
-  padding: 1.33333rem 2.38889rem; }
-  [role="main"] i {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0 0.55556rem 0 0; }
-
-.quotes {
-  padding: 1.33333rem 0; }
-  .quotes blockquote + blockquote {
-    margin-top: 1.33333rem; }
-  .quotes .text {
-    font-size: 1.77778rem;
-    line-height: 2rem;
-    font-style: italic; }
-  .quotes .open, .quotes .close {
-    color: #c00;
-    display: inline-block;
-    font-size: 2.38889rem;
-    font-weight: bold; }
-  .quotes .open {
-    content: '“';
-    margin-left: -1.33333rem;
-    width: 1.33333rem; }
-  .quotes .close {
-    content: '”'; }
-  .quotes cite {
-    display: block; }
-    .quotes cite:before {
-      content: '— '; }
+@media (min-width: 45em) {
+  [data-location='home'] .page {
+    background: url('../images/cover.jpg') no-repeat scroll top right;
+    background-size: auto 100%; } }
+[data-location='home'] .page em {
+  color: #999999;
+  font-variant: small-caps; }
+  [data-location='home'] .page em:before {
+    content: ' | '; }
 
 .release {
-  border-left: #c00 solid 0.55556rem;
-  margin-bottom: 1.33333rem;
-  margin-left: -0.55556rem;
-  padding: 1.33333rem 0.55556rem;
-  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 1px 1px 0 #fff, -1px -1px 0 #fff; }
-  .release [href*='teacupgorilla']:link, .release [href*='teacupgorilla']:visited {
-    font-size: 3.16667rem;
-    line-height: 3.33333rem;
-    color: #c00; }
+  font-variant: small-caps; }
   .release .p-name {
     font-size: 2.38889rem;
     line-height: 2.66667rem;
-    margin-bottom: 1.33333rem; }
+    font-variant: normal;
+    margin-bottom: 0.66667rem; }
   .release .sub {
     font-variant: small-caps; }
-
-.details {
-  padding: 1.33333rem 0; }
-  .details b {
+  .release a:link, .release a:visited {
+    font-variant: normal;
     font-weight: bold; }
 
+.presenters a:link, .presenters a:visited {
+  font-size: 3.16667rem;
+  line-height: 3.33333rem; }
 
-/*# sourceMappingURL=book.css.map */
+.event-details {
+  list-style: disc;
+  margin: 0.66667rem 0; }
+
+.pullquote {
+  background: #fff;
+  border: 1px solid #999999;
+  box-shadow: 0 1px 1px #999999;
+  height: 0;
+  margin-bottom: 1.33333rem;
+  padding-bottom: 60%;
+  position: relative; }
+  @media (min-width: 30rem) {
+    .pullquote {
+      font-size: 1.33333rem;
+      line-height: 2rem; } }
+  .pullquote:before, .pullquote:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #999999;
+    box-shadow: 0 1px 1px #999999;
+    z-index: -1; }
+  .pullquote:before {
+    -webkit-transform: rotate(-1.5deg);
+    transform: rotate(-1.5deg); }
+  .pullquote:after {
+    -webkit-transform: rotate(1.5deg);
+    transform: rotate(1.5deg); }
+  .pullquote p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 15%; }
+
+.blurb + .blurb {
+  margin-top: 2.66667rem; }
+
+.blurb-body {
+  font-size: 1.77778rem;
+  line-height: 2rem;
+  font-style: italic;
+  margin-bottom: 0.33333rem; }
+  .blurb-body .open, .blurb-body .close {
+    font-size: 2.38889rem;
+    line-height: 1.33333rem;
+    color: #c00;
+    font-weight: bold; }
+  .blurb-body .open {
+    display: inline-block;
+    margin-left: -1.33333rem;
+    width: 1.33333rem; }
+
+.blurb-cite {
+  color: #999999; }
+
+[role='contentinfo'] {
+  font-size: 0.77778rem;
+  line-height: 1.33333rem;
+  color: #999999;
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: 2.66667rem 1.33333rem;
+  text-transform: uppercase; }
+  [role='contentinfo'] strong, [role='contentinfo'] .p-name {
+    font-weight: bold; }
+
+.publisher a:link, .publisher a:visited {
+  font-weight: bold; }
+
+
+/*# sourceMappingURL=screen.css.map */
