@@ -1,56 +1,39 @@
 // Main
 // ====
 
-[role="main"] {
-  max-width: 45rem;
-  padding: size(gutter) size(spacer);
+.section {
+  border-bottom: 2px dashed color(brand);
+}
 
-  i {
-    background: color(overlay);
-    padding: 0 size(shim) 0 0;
+.section-inner {
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: size(gutter)*4 size(gutter);
+
+  @include at(45em) {
+    padding: 25vh size(gutter);
   }
 }
 
+h1 {
+  @include font-size(h1);
+  color: color(brand);
+}
 
-// Quotes
-// ------
 
-.quotes {
-  padding: size(gutter) 0;
+// Home
+// ----
 
-  blockquote + blockquote {
-    margin-top: size(gutter);
+[data-location='home'] .page {
+  @include at(45em) {
+    background: url('../images/cover.jpg') no-repeat scroll top right;
+    background-size: auto 100%;
   }
 
-  .text {
-    @include font-size(h3);
-    font-style: italic;
-  }
-
-  .open,
-  .close {
-    color: color(brand);
-    display: inline-block;
-    font-size: size(h2);
-    font-weight: bold;
-  }
-
-  .open {
-    content: '“';
-    margin-left: - size(gutter);
-    width: size(gutter);
-  }
-
-  .close {
-    content: '”';
-  }
-
-  cite {
-    display: block;
-
-    &:before {
-      content: '— ';
-    }
+  em {
+    @include before(' | ');
+    color: color(light);
+    font-variant: small-caps;
   }
 }
 
@@ -59,42 +42,135 @@
 // -------
 
 .release {
-  border-left: color(brand) solid size(shim);
-  margin-bottom: size(gutter);
-  margin-left: - size(shim);
-  padding: size(gutter) size(shim);
-  text-shadow: 0 1px 0 color(background),
-               0 -1px 0 color(background),
-               1px 0 0 color(background),
-               -1px 0 0 color(background),
-               1px 1px 0 color(background),
-               -1px -1px 0 color(background);
-
-  [href*='teacupgorilla'] {
-    #{$link} {
-      @include font-size(h1);
-      color: color(action);
-    }
-  }
+  font-variant: small-caps;
 
   .p-name {
     @include font-size(h2);
-    margin-bottom: size(gutter);
+    font-variant: normal;
+    margin-bottom: size(shim);
   }
 
   .sub {
     font-variant: small-caps;
   }
+
+  a {
+    #{$link} {
+      font-variant: normal;
+      font-weight: bold;
+    }
+  }
+}
+
+.presenters {
+  a {
+    #{$link} {
+      @include font-size(h1);
+    }
+  }
+}
+
+.event-details {
+  list-style: disc;
+  margin: size(shim) 0;
 }
 
 
-// Details
-// -------
+// intro
+// -----
 
-.details {
-  padding: size(gutter) 0;
+.pullquote {
+  background: color(background);
+  border: 1px solid color(light);
+  box-shadow: 0 1px 1px color(light);
+  height: 0;
+  margin-bottom: size(gutter);
+  padding-bottom: percentage(3/5);
+  position: relative;
 
-  b {
+  @include at(30rem) {
+    @include font-size(24px, 1.5);
+  }
+
+  @include wrap-content(' ') {
+    @include stretch;
+    background: color(background);
+    border: 1px solid color(light);
+    box-shadow: 0 1px 1px color(light);
+    z-index: -1;
+  }
+
+  &:before {
+    transform: rotate(-1.5deg);
+  }
+
+  &:after {
+    transform: rotate(1.5deg);
+  }
+
+  p {
+    @include stretch;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 15%;
+  }
+}
+
+
+// blurbs
+// ------
+
+.blurb + .blurb {
+  margin-top: size(gutter)*2;
+}
+
+.blurb-body {
+  @include font-size(h3);
+  font-style: italic;
+  margin-bottom: size(half-shim);
+
+  .open,
+  .close {
+    @include font-size(h2, 1);
+    color: color(brand);
     font-weight: bold;
+  }
+
+  .open {
+    display: inline-block;
+    margin-left: - size(gutter);
+    width: size(gutter);
+  }
+}
+
+.blurb-cite {
+  color: color(light);
+}
+
+
+// contentinfo
+// -----------
+
+[role='contentinfo'] {
+  @extend %boilerplate;
+  @include font-size(small);
+  color: color(light);
+  margin: 0 auto;
+  max-width: 45rem;
+  padding: size(gutter)*2 size(gutter);
+  text-transform: uppercase;
+
+  strong,
+  .p-name {
+    font-weight: bold;
+  }
+}
+
+.publisher {
+  a {
+    #{$link} {
+      font-weight: bold;
+    }
   }
 }

@@ -17,7 +17,13 @@ $sizes: (
 
   gutter: rhythm,
   spacer: 3,
-  shim: -2,
 
-  corners: shim,
+  corners: -2,
 );
+
+$meta-sizes: (
+  shim: size(gutter)/2,
+  half-shim: size(gutter)/4,
+);
+
+$sizes: map-merge($sizes, $meta-sizes);

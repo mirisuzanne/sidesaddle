@@ -15,11 +15,7 @@ html {
   @include baseline;
   background: color(background);
   color: color(text);
-
-  @include at(44em) {
-    background: url('../images/cover.jpg') no-repeat fixed top right;
-    background-size: cover;
-  }
+  text-shadow: 0 1px 0 color(background);
 }
 
 html,
@@ -32,12 +28,12 @@ $focus: '&:hover, &:focus, &:active';
 
 a {
   #{$link} {
-    color: currentColor;
-    font-weight: bold;
+    color: color(action);
     text-decoration: none;
   }
 
   #{$focus} {
-    color: color(action);
+    color: color(focus);
+    text-decoration: underline;
   }
 }

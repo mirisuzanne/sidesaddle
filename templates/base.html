@@ -44,7 +44,7 @@
   {% endblock htmlhead %}
 </head>
 
-<body id="ridingsidesaddle" class="{% block bodyclasses %}{% endblock %}">
+<body id="ridingsidesaddle" class="{% block bodyclasses %}{% endblock %}" {% if config.location %}data-location="{{ config.location }}"{% endif %}>
 {% include "_icons.svg" %}
 
 {% block template %}{% endblock template %}

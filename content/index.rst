@@ -1,5 +1,4 @@
 public: yes
-hide_title: yes
 after:
   - include: 'components/_release.html.j2'
   - include: 'components/_intro.html.j2'
@@ -10,6 +9,6 @@ Riding SideSaddle*
 ==================
 
 `Eric M Suzanne`_
-_a novel_
+*a novel*
 
 .. _Eric M Suzanne: http://ericsuzanne.com/

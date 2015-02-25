@@ -3,6 +3,8 @@
 'use strict';
 
 var gulp = require('gulp');
+var gutil = require('gulp-util');
+var spawn = require('child_process').spawn;
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scsslint');
 var autoprefixer = require('gulp-autoprefixer');
