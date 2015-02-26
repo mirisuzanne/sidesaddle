@@ -9,3 +9,4 @@ Jinja2==2.6
 Werkzeug==0.8.3
 Pygments==2.0.2
 smartypants==1.6.0.3
+pypdf==1.13
