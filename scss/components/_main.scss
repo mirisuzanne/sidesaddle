@@ -3,17 +3,18 @@
 
 .section {
   border-bottom: 2px dashed color(brand);
+  padding: size(gutter)*3 0;
+  transition: all 300ms;
+
+  @include at(45em) {
+    padding: 18vh 0;
+  }
 }
 
 .section-inner {
   margin: 0 auto;
   max-width: 45rem;
-  padding: size(gutter)*4 size(gutter);
-  transition: all 300ms;
-
-  @include at(45em) {
-    padding: 25vh size(gutter);
-  }
+  padding: size(gutter);
 }
 
 h1 {
@@ -29,6 +30,7 @@ h1 {
   @include at(45em) {
     background: url('../images/cover.jpg') no-repeat scroll top right;
     background-size: auto 100%;
+    padding: 30vh 0;
   }
 
   em {
@@ -43,10 +45,19 @@ h1 {
 // -------
 
 .release {
+  background: linear-gradient(to top, color(overlay) size(rhythm)*6, color(overlay (rgba: 0)) size(rhythm)*14) no-repeat scroll,
+              url('../images/tg-jen.jpg') no-repeat scroll;
+  background-clip: padding-box;
+  background-size: cover;
+  padding: size(gutter)*5 0 0;
   position: relative;
 
+  @include at(45em) {
+    padding: 50vh 0 0;
+  }
+
   .p-name {
-    @include relative-font(6vw, h2);
+    @include relative-font(5vw, h2);
     margin-bottom: size(shim);
   }
 
@@ -138,7 +149,7 @@ h1 {
 
   &:hover {
     &:before {
-      transform: rotate(3deg) translate3d(10%, -20%, 0);
+      transform: rotate(3deg) translate3d(20%, -20%, 0);
     }
 
     &:after {
