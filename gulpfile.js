@@ -39,10 +39,7 @@ var spawnTask = function (command, args, cb) {
   );
 };
 
-gulp.task('default', [
-  'runserver',
-  'watch'
-]);
+gulp.task('default', ['watch', 'runserver']);
 
 gulp.task('watch', function () {
   // lint and compile scss
@@ -69,5 +66,5 @@ gulp.task('scsslint', function () {
 });
 
 gulp.task('runserver', function (cb) {
-  spawnTask('make serve', [], cb);
+  spawnTask('make', ['serve'], cb);
 });
