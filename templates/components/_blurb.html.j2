@@ -24,7 +24,7 @@
         {% if blurb.org_url %}
           <a href="{{ blurb.org_url }}" class="p-org">{{ blurb.org }}</a>
         {% else %}
-          <span class="p-org">{{ blurb.org }}</span>
+          <span class="p-org">{{ blurb.org|safe }}</span>
         {% endif %}
       {% endif %}
     </figcaption>

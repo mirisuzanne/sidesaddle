@@ -18,28 +18,3 @@ $fonts: (
     stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
   ),
 );
-
-
-@mixin fonts(
-  $fonts: $fonts
-) {
-  @each $font, $detail in $fonts {
-    $name: map-get($detail, name);
-
-    @each $styles in map-get($detail, styles) {
-
-      $path-keys: if(length($styles) == 1, $styles null, $styles);
-      $path: interpolate(map-get($detail, path), $path-keys...);
-
-      $styles: if($styles == 'regular', 'normal', $styles);
-      $styles: if(length($styles) == 1, $styles normal, $styles);
-
-      @include font-face(join($name $path, $styles));
-
-    }
-
-    %#{$font} {
-      font-family: $name, map-get($detail, stack);
-    }
-  }
-}
