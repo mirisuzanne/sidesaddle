@@ -49,11 +49,11 @@ h1 {
               url('../images/tg-jen.jpg') no-repeat scroll;
   background-clip: padding-box;
   background-size: cover;
-  padding: size(gutter)*5 0 0;
+  padding: size(gutter)*5 0 size(gutter);
   position: relative;
 
   @include at(45em) {
-    padding: 50vh 0 0;
+    padding: 50vh 0 size(gutter);
   }
 
   .p-name {
@@ -82,7 +82,7 @@ h1 {
   padding: size(gutter);
   position: absolute;
   top: 0;
-  transform: rotate(-.5deg) translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   white-space: nowrap;
 }
 
@@ -103,6 +103,30 @@ h1 {
 .event-details {
   list-style: disc;
   margin: size(shim) 0;
+}
+
+.press-kit {
+  #{$link} {
+    background: color(background);
+    border: 2px solid color(action);
+    color: color(text);
+    display: inline-block;
+    left: 50%;
+    padding: size(gutter);
+    position: absolute;
+    top: 100%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: all 300ms;
+  }
+
+  #{$focus} {
+    text-decoration: none;
+    transform: translate3d(-50%, -50%, 0) scale(1.25);
+  }
+
+  b {
+    color: color(action);
+  }
 }
 
 
