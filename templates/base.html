@@ -6,7 +6,16 @@
 
   <!-- Page Info -->
   <title>{% block title %}{{ config.title }}{% endblock %}</title>
-  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+  <meta name="description" content="{{ config.description }}" />
+
+  <!-- Facebook OG Info -->
+  <meta property="og:title" content="{{ config.title }}" />
+  <meta property="og:site_name" content="{{ config.title }}"/>
+  <meta property="og:url" content="{{ config.canonical_url }}" />
+  <meta property="og:description" content="{{ config.longdesc }}" />
+  <meta property="og:image" content="/static/images/title.jpg" />
+  <meta property="og:image:width" content="1200px" />
+  <meta property="og:image:height" content="675px" />
 
   <!-- Site Info -->
   {% block robots %}<meta name="robots" content="index, follow" />{% endblock %}
