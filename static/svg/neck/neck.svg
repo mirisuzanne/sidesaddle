@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg class='logo' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 870">
+  <style>
+
+    @-webkit-keyframes blur {
+      0%, 50%, 58%, 100% { -webkit-filter: blur(0px); }
+      55%, 80% { -webkit-filter: blur(3px); }
+      75% { -webkit-filter: blur(5px); }
+    }
+
+    @-webkit-keyframes move {
+      0%, 50%, 58%, 100% { transform: translate3d(0px, 0px, 0px); }
+      25%, 80% { transform: translate3d(-15px, 3px, 0px); }
+      75% { transform: translate3d(5px, -12px, 0px); }
+    }
+
+    g {
+      mix-blend-mode: multiply;
+    }
+
+    svg {
+      -webkit-animation: blur 120s infinite;
+    }
+
+    .mask-source {
+      -webkit-animation: move 60s infinite;
+    }
+
+    .image--1 {
+      -webkit-animation: move 60s 5s infinite;
+    }
+
+    .image--2 {
+      -webkit-animation: move 80s 10s reverse infinite;
+    }
+
+    .image--3 {
+      -webkit-animation: move 90s 30s infinite;
+    }
+  </style>
+  <defs>
+    <mask id="neck-mask">
+      <image xlink:href="neck-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+    <mask id="bird-mask">
+      <image xlink:href="bird-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+    <mask id="chastity-mask">
+      <image xlink:href="chastity-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+    <mask id="lips-mask">
+      <image xlink:href="lips-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+    <mask id="map-mask">
+      <image xlink:href="map-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+    <mask id="meat-mask">
+      <image xlink:href="meat-mask.png" class="mask-source" width="1500" height="870"></image>
+    </mask>
+  </defs>
+
+  <g class="black">
+    <g class="neck-mask mask" mask="url(#neck-mask)">
+      <g class="image image--1">
+        <image class="neck" xlink:href="../source/neck.png" width="1500" height="870"></image>
+      </g>
+    </g>
+
+    <g class="neck-trace-mask mask">
+      <g class="image image--2">
+        <image class="neck-trace" xlink:href="trace.jpg" width="737" height="870" transform="scale(1.17)" x="515" y="-50"></image>
+      </g>
+    </g>
+
+    <g class="meat-mask mask" mask="url(#meat-mask)">
+      <g class="image image--3">
+        <image class="meat" xlink:href="../source/meat.gif" width="864" height="1050" transform="scale(1.6)" x="210" y="-175"></image>
+      </g>
+    </g>
+
+    <g class="bird-mask mask" mask="url(#bird-mask)">
+      <g class="image image--2">
+        <image class="bird" xlink:href="../source/bird.jpg" width="368" height="400" transform="scale(1.5) translate(600, -290)"></image>
+      </g>
+    </g>
+
+    <g class="chastity-mask mask" mask="url(#chastity-mask)">
+      <g class="image image--1">
+        <image class="chastity" xlink:href="../source/chastity.png" width="1024" height="963" transform="scale(.95) translate(805, 55)"></image>
+      </g>
+    </g>
+
+    <g class="map-mask mask" mask="url(#map-mask)">
+      <g class="image image--3">
+        <image class="map" xlink:href="../source/map.jpg" width="1500" height="1129" transform="scale(.75) translate(765, -250)"></image>
+      </g>
+    </g>
+
+    <g class="battery-mask mask">
+      <g class="image image--1">
+        <image class="battery" xlink:href="battery.jpg" width="1502" height="984" transform="scale(1.25) translate(-240, -45)"></image>
+      </g>
+    </g>
+  </g>
+
+  <g class="red">
+    <g class="crayon-mask mask" mask="url(#lips-mask)">
+      <g class="image image--2">
+        <image class="crayon" xlink:href="crayon.jpg" width="469" height="526" transform="translate(1200, -120)"></image>
+      </g>
+    </g>
+
+    <g class="arrows-mask mask">
+      <g class="image image--3">
+        <image class="arrows" xlink:href="arrows.jpg" width="396" height="900" transform="translate(1260, -80)"></image>
+      </g>
+    </g>
+  </g>
+</svg>
