@@ -26,17 +26,48 @@ h1 {
 // Home
 // ----
 
-[data-location='home'] .page {
+@mixin button-ish {
+  &,
+  #{$link} {
+    background: color(background);
+    border: 2px solid color(action);
+    border-radius: size(corners);
+    font-weight: bold;
+    padding: size(shim) size(spacer);
+    transition: all 150ms;
+  }
+
+  #{$focus} {
+    background: color(action);
+    color: contrast(action);
+    text-decoration: none;
+    text-shadow: 0 1px 0 color(focus);
+  }
+
+  &:active {
+    border-color: color(focus);
+  }
+}
+
+.page {
   @include at(45em) {
     background: url('../images/cover.jpg') no-repeat scroll top right;
     background-size: auto 100%;
-    padding: 30vh 0;
+    padding: 25vh 0;
   }
 
   em {
     @include before(' | ');
     color: color(light);
     font-variant: small-caps;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: size(spacer);
+  }
+
+  [href*='springgunpress.com'] {
+    @include button-ish;
   }
 }
 
@@ -228,6 +259,46 @@ h1 {
 .blurb-cite {
   @extend %boilerplate;
   color: color(light);
+}
+
+
+// Box
+// ---
+
+.box {
+  #{$link} {
+    background: url('../images/box.jpg') no-repeat scroll center;
+    background-size: cover;
+    display: block;
+    height: 0;
+    padding-top: size(spacer)*6;
+    position: relative;
+
+    @include at(40em) {
+      padding-top: percentage(300/1000);
+    }
+  }
+
+  #{$focus} {
+    outline: 0;
+    text-decoration: none;
+
+    .fake-button {
+      text-decoration: underline;
+    }
+  }
+
+  .fake-button {
+    @include button-ish;
+    display: inline-block;
+    left: 50%;
+    max-width: 25rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translate3d(-50%, -50%, 0);
+    width: 90%;
+  }
 }
 
 
