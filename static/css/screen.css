@@ -115,7 +115,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   
   src: url('../fonts/rockingham/rockingham-bolditalic-webfont.woff2') format('woff2'), url('../fonts/rockingham/rockingham-bolditalic-webfont.woff') format('woff'), url('../fonts/rockingham/rockingham-bolditalic-webfont.ttf') format('truetype'); }
 
-html {
+html, .text {
   font-family: 'rockingham', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 *, *:before, *:after {
@@ -161,15 +161,31 @@ h1 {
       line-height: 3.33333rem; } }
 
 @media (min-width: 45em) {
-  [data-location='home'] .page {
+  .page {
     background: url('../images/cover.jpg') no-repeat scroll top right;
     background-size: auto 100%;
-    padding: 30vh 0; } }
-[data-location='home'] .page em {
+    padding: 25vh 0; } }
+.page em {
   color: #666666;
   font-variant: small-caps; }
-  [data-location='home'] .page em:before {
+  .page em:before {
     content: ' | '; }
+.page p:not(:last-child) {
+  margin-bottom: 2.38889rem; }
+.page [href*='springgunpress.com'], .page [href*='springgunpress.com']:link, .page [href*='springgunpress.com']:visited {
+  background: #fff;
+  border: 2px solid #c00;
+  border-radius: 0.55556rem;
+  font-weight: bold;
+  padding: 0.66667rem 2.38889rem;
+  transition: all 150ms; }
+.page [href*='springgunpress.com']:hover, .page [href*='springgunpress.com']:focus, .page [href*='springgunpress.com']:active {
+  background: #c00;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ad0000; }
+.page [href*='springgunpress.com']:active {
+  border-color: #ad0000; }
 
 .release {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 8rem, rgba(255, 255, 255, 0) 18.66667rem) no-repeat scroll, url('../images/tg-jen.jpg') no-repeat scroll;
@@ -340,6 +356,46 @@ h1 {
 .blurb-cite {
   color: #666666; }
 
+.box:link, .box:visited {
+  background: url('../images/box.jpg') no-repeat scroll center;
+  background-size: cover;
+  display: block;
+  height: 0;
+  padding-top: 14.33333rem;
+  position: relative; }
+  @media (min-width: 40em) {
+    .box:link, .box:visited {
+      padding-top: 30%; } }
+.box:hover, .box:focus, .box:active {
+  outline: 0;
+  text-decoration: none; }
+  .box:hover .fake-button, .box:focus .fake-button, .box:active .fake-button {
+    text-decoration: underline; }
+.box .fake-button {
+  display: inline-block;
+  left: 50%;
+  max-width: 25rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  width: 90%; }
+  .box .fake-button, .box .fake-button:link, .box .fake-button:visited {
+    background: #fff;
+    border: 2px solid #c00;
+    border-radius: 0.55556rem;
+    font-weight: bold;
+    padding: 0.66667rem 2.38889rem;
+    transition: all 150ms; }
+  .box .fake-button:hover, .box .fake-button:focus, .box .fake-button:active {
+    background: #c00;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ad0000; }
+  .box .fake-button:active {
+    border-color: #ad0000; }
+
 [role='contentinfo'] {
   font-size: 0.77778rem;
   line-height: 1.33333rem;
@@ -470,89 +526,175 @@ h1 {
     -webkit-transform: translate3d(1px, -3px, 0);
     transform: translate3d(1px, -3px, 0); } }
 
+@-webkit-keyframes glitch {
+  0% {
+    opacity: 1;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  20% {
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  21% {
+    -webkit-transform: skewX(-3deg);
+    transform: skewX(-3deg); }
+
+  35% {
+    opacity: .5;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  35.5% {
+    opacity: .25;
+    -webkit-transform: skewX(70deg);
+    transform: skewX(70deg); }
+
+  36% {
+    -webkit-transform: skewX(-60deg);
+    transform: skewX(-60deg); }
+
+  36.5% {
+    opacity: .5;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); } }
+
+@keyframes glitch {
+  0% {
+    opacity: 1;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  20% {
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  21% {
+    -webkit-transform: skewX(-3deg);
+    transform: skewX(-3deg); }
+
+  35% {
+    opacity: .5;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  35.5% {
+    opacity: .25;
+    -webkit-transform: skewX(70deg);
+    transform: skewX(70deg); }
+
+  36% {
+    -webkit-transform: skewX(-60deg);
+    transform: skewX(-60deg); }
+
+  36.5% {
+    opacity: .5;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg); } }
+
 .art {
-  -webkit-animation: blur 120s ease infinite both;
-  animation: blur 120s ease infinite both; }
+  -webkit-animation: blur 21s 3s ease infinite;
+  animation: blur 21s 3s ease infinite; }
 
 .image--1 {
-  -webkit-animation: shake 21s 12s linear infinite;
-  animation: shake 21s 12s linear infinite; }
+  -webkit-animation: shake 42s 15s linear infinite;
+  animation: shake 42s 15s linear infinite; }
 
 .mask--1 {
-  -webkit-animation: shake 14s 18s linear infinite;
-  animation: shake 14s 18s linear infinite; }
+  -webkit-animation: shake 49s 3s linear infinite;
+  animation: shake 49s 3s linear infinite; }
 
 .image--2 {
-  -webkit-animation: shake 42s 18s linear infinite;
-  animation: shake 42s 18s linear infinite; }
+  -webkit-animation: shake 7s 30s linear infinite;
+  animation: shake 7s 30s linear infinite; }
 
 .mask--2 {
-  -webkit-animation: shake 56s 21s linear infinite;
-  animation: shake 56s 21s linear infinite; }
+  -webkit-animation: shake 28s 12s linear infinite;
+  animation: shake 28s 12s linear infinite; }
 
 .image--3 {
-  -webkit-animation: shake 35s 30s linear infinite;
-  animation: shake 35s 30s linear infinite; }
+  -webkit-animation: shake 56s 27s linear infinite;
+  animation: shake 56s 27s linear infinite; }
 
 .mask--3 {
-  -webkit-animation: shake 7s 3s linear infinite;
-  animation: shake 7s 3s linear infinite; }
+  -webkit-animation: shake 35s 18s linear infinite;
+  animation: shake 35s 18s linear infinite; }
 
 .image--4 {
+  -webkit-animation: shake 35s 18s linear infinite;
+  animation: shake 35s 18s linear infinite; }
+
+.mask--4 {
+  -webkit-animation: shake 49s 27s linear infinite;
+  animation: shake 49s 27s linear infinite; }
+
+.image--5 {
+  -webkit-animation: shake 35s 6s linear infinite;
+  animation: shake 35s 6s linear infinite; }
+
+.mask--5 {
   -webkit-animation: shake 28s 27s linear infinite;
   animation: shake 28s 27s linear infinite; }
 
-.mask--4 {
-  -webkit-animation: shake 70s 3s linear infinite;
-  animation: shake 70s 3s linear infinite; }
+.image--6 {
+  -webkit-animation: shake 21s 27s linear infinite;
+  animation: shake 21s 27s linear infinite; }
 
-.image--5 {
+.mask--6 {
+  -webkit-animation: shake 49s 3s linear infinite;
+  animation: shake 49s 3s linear infinite; }
+
+.image--7 {
+  -webkit-animation: shake 7s 6s linear infinite;
+  animation: shake 7s 6s linear infinite; }
+
+.mask--7 {
+  -webkit-animation: shake 49s 15s linear infinite;
+  animation: shake 49s 15s linear infinite; }
+
+.image--8 {
   -webkit-animation: shake 63s 27s linear infinite;
   animation: shake 63s 27s linear infinite; }
 
-.mask--5 {
-  -webkit-animation: shake 49s 9s linear infinite;
-  animation: shake 49s 9s linear infinite; }
+.mask--8 {
+  -webkit-animation: shake 21s 21s linear infinite;
+  animation: shake 21s 21s linear infinite; }
 
-.image--6 {
-  -webkit-animation: shake 14s 9s linear infinite;
-  animation: shake 14s 9s linear infinite; }
-
-.mask--6 {
-  -webkit-animation: shake 35s 21s linear infinite;
-  animation: shake 35s 21s linear infinite; }
-
-.image--7 {
+.image--9 {
   -webkit-animation: shake 56s 21s linear infinite;
   animation: shake 56s 21s linear infinite; }
 
-.mask--7 {
-  -webkit-animation: shake 14s 18s linear infinite;
-  animation: shake 14s 18s linear infinite; }
-
-.image--8 {
-  -webkit-animation: shake 28s 15s linear infinite;
-  animation: shake 28s 15s linear infinite; }
-
-.mask--8 {
-  -webkit-animation: shake 28s 24s linear infinite;
-  animation: shake 28s 24s linear infinite; }
-
-.image--9 {
-  -webkit-animation: shake 28s 6s linear infinite;
-  animation: shake 28s 6s linear infinite; }
-
 .mask--9 {
-  -webkit-animation: shake 49s 18s linear infinite;
-  animation: shake 49s 18s linear infinite; }
+  -webkit-animation: shake 42s 21s linear infinite;
+  animation: shake 42s 21s linear infinite; }
 
 .image--10 {
-  -webkit-animation: shake 49s 12s linear infinite;
-  animation: shake 49s 12s linear infinite; }
+  -webkit-animation: shake 21s 18s linear infinite;
+  animation: shake 21s 18s linear infinite; }
 
 .mask--10 {
-  -webkit-animation: shake 42s 27s linear infinite;
-  animation: shake 42s 27s linear infinite; }
+  -webkit-animation: shake 14s 27s linear infinite;
+  animation: shake 14s 27s linear infinite; }
+
+.text {
+  font-size: 1.77778rem;
+  line-height: 2rem;
+  -webkit-animation: shake 70s 9s linear infinite;
+  animation: shake 70s 9s linear infinite; }
+
+.tspan {
+  -webkit-animation: glitch 17s infinite;
+  animation: glitch 17s infinite; }
 
 
 /*# sourceMappingURL=screen.css.map */
