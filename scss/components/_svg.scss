@@ -17,47 +17,47 @@
 
 @keyframes shake {
   0%, 5%, 42%, 48%, 100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 
   10% {
-    transform: translate3d(-1px, -3px, 0);
+    transform: translate3d(-1px, -3px, 0) scale(1.006);
   }
 
   20% {
-    transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0) scale(1);
   }
 
   30% {
-    transform: translate3d(0, 3px, 0);
+    transform: translate3d(0, 3px, 0) scale(.994);
   }
 
   40% {
-    transform: translate3d(1px, -1px, 0);
+    transform: translate3d(1px, -1px, 0) scale(.994);
   }
 
   50% {
-    transform: translate3d(-1px, 3px, 0);
+    transform: translate3d(-1px, 3px, 0) scale(1);
   }
 
   60% {
-    transform: translate3d(-5px, 1px, 0);
+    transform: translate3d(-5px, 1px, 0) scale(1.006);
   }
 
   70% {
-    transform: translate3d(3px, 1px, 0);
+    transform: translate3d(3px, 1px, 0) scale(1.01);
   }
 
   80% {
-    transform: translate3d(-1px, -1px, 0);
+    transform: translate3d(-1px, -1px, 0) scale(1.01);
   }
 
   90% {
-    transform: translate3d(3px, 3px, 0);
+    transform: translate3d(3px, 3px, 0) scale(1);
   }
 
   100% {
-    transform: translate3d(1px, -3px, 0);
+    transform: translate3d(1px, -3px, 0) scale(1);
   }
 }
 
@@ -106,18 +106,18 @@
 
 @for $i from 1 through 10 {
   .image--#{$i} {
-    animation: shake random(10)*7s random(10)*3s linear infinite;
+    animation: shake random(30)+30s random(10)+3s linear infinite;
   }
 
   .mask--#{$i} {
-    animation: shake random(10)*7s random(10)*3s linear infinite;
+    animation: shake random(30)+30s random(10)+3s linear infinite;
   }
 }
 
 .text {
   @extend %body;
   @include font-size(h3);
-  animation: shake random(10)*7s random(10)*3s linear infinite;
+  animation: shake random(30)+30s random(10)+3s linear infinite;
 }
 
 .tspan {
@@ -142,10 +142,15 @@
   }
 }
 
-.sunrise {
-  animation: sunrise 180s infinite alternate ease-in-out;
+.wiring2-mask {
+  transform-origin: top left;
 }
 
 .sunrise-wrap {
   transform: translate3d(-425px, 300px, 0);
 }
+
+.sunrise {
+  animation: sunrise 180s infinite alternate ease-in-out;
+}
+
