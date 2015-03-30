@@ -100,7 +100,6 @@
   }
 }
 
-
 .art {
   animation: blur 21s 3s ease infinite;
 }
@@ -123,4 +122,30 @@
 
 .tspan {
   animation: glitch 17s infinite;
+}
+
+
+// Denver
+// ------
+
+@keyframes sunrise {
+  0% {
+    transform: rotate(-40deg)
+               translate3d(500px, 0, 0)
+               rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(0deg)
+               translate3d(500px, 0, 0)
+               rotate(0deg);
+  }
+}
+
+.sunrise {
+  animation: sunrise 180s infinite alternate ease-in-out;
+}
+
+.sunrise-wrap {
+  transform: translate3d(-425px, 300px, 0);
 }
