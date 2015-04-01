@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg class='art art--dancers' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 900">
+  <style>
+    g { mix-blend-mode: multiply; }
+  </style>
+
+  <defs>
+    <mask id="cancer-mask" class="mask mask--1">
+      <image
+        xlink:href=""
+        class="mask-source" width="1650" height="1050" x="-75" y="-75"></image>
+    </mask>
+
+    <mask id="dance-mask" class="mask mask--2">
+      <image
+        xlink:href=""
+        class="mask-source" width="1650" height="1050" x="-75" y="-75"></image>
+    </mask>
+
+    <mask id="frame" class="mask mask--4">
+      <rect width="100%" height="100%" fill="#fff"></rect>
+    </mask>
+  </defs>
+
+  <g class="black" mask="url(#frame)">
+    <rect width="100%" height="100%" fill="#eee"></rect>
+
+    <g class="dance-mask mask">
+      <g class="image image--1">
+        <image class="dance"
+          xlink:href=""
+          width="1650" height="1050" x="-75" y="-75"></image>
+      </g>
+    </g>
+
+    <g class="baylor-mask mask">
+      <g class="image image--3">
+        <image class="baylor"
+          xlink:href=""
+          width="700" height="1250" x="-500" y="-120"></image>
+      </g>
+    </g>
+
+    <g class="cancer-mask mask" mask="url(#cancer-mask)">
+      <g class="image image--4">
+        <image class="cancer"
+          xlink:href=""
+          width="800" height="400" x="700" y="200"></image>
+      </g>
+    </g>
+
+    <g class="gun-mask mask" mask="url(#dance-mask)">
+      <g class="image image--6">
+        <image class="gun"
+          xlink:href=""
+          width="1650" height="1300" x="125" y="-675"></image>
+      </g>
+    </g>
+
+  </g>
+
+  <g class="red">
+    <g class="arrows-mask mask">
+      <g class="image image--9">
+        <image class="arrows"
+          xlink:href=""
+          width="400" height="660" x="1150" y="110"></image>
+      </g>
+    </g>
+  </g>
+
+  <g class="text">
+    <g class="tspan text--1">
+      <text x="50" y="100">[</text>
+    </g>
+
+    <g class="tspan text--2">
+      <text x="50" y="200">] dangly bits [</text>
+    </g>
+
+    <g class="tspan text--2">
+      <text x="50" y="300">] imperfect [</text>
+    </g>
+
+    <g class="tspan text--2">
+      <text x="50" y="400">] concave.</text>
+    </g>
+  </g>
+</svg>
