@@ -1,6 +1,8 @@
 public: no
 hide_title: yes
 before:
+  - include: 'svg/_house.svg'
+  - include: 'svg/_divers.svg'
   - include: 'svg/_reeds.svg'
   - include: 'svg/_dancers.svg'
   - include: 'svg/_denver.svg'
