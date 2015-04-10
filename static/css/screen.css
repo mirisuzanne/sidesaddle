@@ -359,20 +359,12 @@ h1 {
 .box:link, .box:visited {
   background: url('../images/box.jpg') no-repeat scroll center;
   background-size: cover;
-  display: block;
   height: 0;
-  padding-top: 14.33333rem;
-  position: relative; }
+  padding-top: 14.33333rem; }
   @media (min-width: 40em) {
     .box:link, .box:visited {
       padding-top: 30%; } }
-.box:hover, .box:focus, .box:active {
-  outline: 0;
-  text-decoration: none; }
-  .box:hover .fake-button, .box:focus .fake-button, .box:active .fake-button {
-    text-decoration: underline; }
 .box .fake-button {
-  display: inline-block;
   left: 50%;
   max-width: 25rem;
   position: absolute;
@@ -381,20 +373,59 @@ h1 {
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   width: 90%; }
-  .box .fake-button, .box .fake-button:link, .box .fake-button:visited {
+
+.link-section:link, .link-section:visited {
+  display: block;
+  position: relative; }
+.link-section:hover, .link-section:focus, .link-section:active {
+  outline: 0;
+  text-decoration: none; }
+  .link-section:hover .fake-button, .link-section:focus .fake-button, .link-section:active .fake-button {
+    text-decoration: underline; }
+.link-section .fake-button {
+  display: inline-block; }
+  .link-section .fake-button, .link-section .fake-button:link, .link-section .fake-button:visited {
     background: #fff;
     border: 2px solid #c00;
     border-radius: 0.55556rem;
     font-weight: bold;
     padding: 0.66667rem 2.38889rem;
     transition: all 150ms; }
-  .box .fake-button:hover, .box .fake-button:focus, .box .fake-button:active {
+  .link-section .fake-button:hover, .link-section .fake-button:focus, .link-section .fake-button:active {
     background: #c00;
     color: #fff;
     text-decoration: none;
     text-shadow: 0 1px 0 #ad0000; }
-  .box .fake-button:active {
+  .link-section .fake-button:active {
     border-color: #ad0000; }
+
+.oddbook {
+  position: relative; }
+  .oddbook p {
+    padding: 1.33333rem 4.77778rem; }
+  .oddbook .fake-button {
+    left: 50%;
+    max-width: 14rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    width: 90%; }
+    .oddbook .fake-button, .oddbook .fake-button:link, .oddbook .fake-button:visited {
+      background: #fff;
+      border: 2px solid #c00;
+      border-radius: 0.55556rem;
+      font-weight: bold;
+      padding: 0.66667rem 2.38889rem;
+      transition: all 150ms; }
+    .oddbook .fake-button:hover, .oddbook .fake-button:focus, .oddbook .fake-button:active {
+      background: #c00;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #ad0000; }
+    .oddbook .fake-button:active {
+      border-color: #ad0000; }
 
 [role='contentinfo'] {
   font-size: 0.77778rem;
@@ -409,6 +440,117 @@ h1 {
 
 .publisher a:link, .publisher a:visited {
   font-weight: bold; }
+
+@-webkit-keyframes logo-shift {
+  0%, 5%, 42%, 48%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  10% {
+    -webkit-transform: translate3d(-1px, -3px, 0);
+    transform: translate3d(-1px, -3px, 0); }
+
+  20% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0); }
+
+  30% {
+    -webkit-transform: translate3d(0, 3px, 0);
+    transform: translate3d(0, 3px, 0); }
+
+  40% {
+    -webkit-transform: translate3d(1px, -1px, 0);
+    transform: translate3d(1px, -1px, 0); }
+
+  50% {
+    -webkit-transform: translate3d(-1px, 3px, 0);
+    transform: translate3d(-1px, 3px, 0); }
+
+  60% {
+    -webkit-transform: translate3d(-5px, 1px, 0);
+    transform: translate3d(-5px, 1px, 0); }
+
+  70% {
+    -webkit-transform: translate3d(3px, 1px, 0);
+    transform: translate3d(3px, 1px, 0); }
+
+  80% {
+    -webkit-transform: translate3d(-1px, -1px, 0);
+    transform: translate3d(-1px, -1px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(3px, 3px, 0);
+    transform: translate3d(3px, 3px, 0); }
+
+  95% {
+    -webkit-transform: translate3d(1px, -3px, 0);
+    transform: translate3d(1px, -3px, 0); } }
+
+@keyframes logo-shift {
+  0%, 5%, 42%, 48%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+
+  10% {
+    -webkit-transform: translate3d(-1px, -3px, 0);
+    transform: translate3d(-1px, -3px, 0); }
+
+  20% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0); }
+
+  30% {
+    -webkit-transform: translate3d(0, 3px, 0);
+    transform: translate3d(0, 3px, 0); }
+
+  40% {
+    -webkit-transform: translate3d(1px, -1px, 0);
+    transform: translate3d(1px, -1px, 0); }
+
+  50% {
+    -webkit-transform: translate3d(-1px, 3px, 0);
+    transform: translate3d(-1px, 3px, 0); }
+
+  60% {
+    -webkit-transform: translate3d(-5px, 1px, 0);
+    transform: translate3d(-5px, 1px, 0); }
+
+  70% {
+    -webkit-transform: translate3d(3px, 1px, 0);
+    transform: translate3d(3px, 1px, 0); }
+
+  80% {
+    -webkit-transform: translate3d(-1px, -1px, 0);
+    transform: translate3d(-1px, -1px, 0); }
+
+  90% {
+    -webkit-transform: translate3d(3px, 3px, 0);
+    transform: translate3d(3px, 3px, 0); }
+
+  95% {
+    -webkit-transform: translate3d(1px, -3px, 0);
+    transform: translate3d(1px, -3px, 0); } }
+
+.oddbooks-logo {
+  width: 100%; }
+  .oddbooks-logo .layer-1, .oddbooks-logo .layer-2 {
+    -webkit-animation: logo-shift linear infinite alternate both;
+    animation: logo-shift linear infinite alternate both;
+    mix-blend-mode: multiply; }
+  .oddbooks-logo .layer-1 {
+    -webkit-animation-delay: 2.3ms;
+    animation-delay: 2.3ms;
+    -webkit-animation-duration: 117s;
+    animation-duration: 117s;
+    fill: #cb8129; }
+  .oddbooks-logo .layer-2 {
+    -webkit-animation-delay: 355ms;
+    animation-delay: 355ms;
+    -webkit-animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+    -webkit-animation-duration: 107s;
+    animation-duration: 107s;
+    fill: #b32356; }
 
 @-webkit-keyframes blur {
   0%, 60%, 75%, 80%, 100% {
@@ -607,90 +749,90 @@ h1 {
   animation: blur 21s 3s ease infinite; }
 
 .image--1 {
-  -webkit-animation: shake 48s 10s linear infinite;
-  animation: shake 48s 10s linear infinite; }
+  -webkit-animation: shake 43s 5s linear infinite;
+  animation: shake 43s 5s linear infinite; }
 
 .mask--1 {
-  -webkit-animation: shake 36s 7s linear infinite;
-  animation: shake 36s 7s linear infinite; }
+  -webkit-animation: shake 47s 12s linear infinite;
+  animation: shake 47s 12s linear infinite; }
 
 .image--2 {
-  -webkit-animation: shake 36s 4s linear infinite;
-  animation: shake 36s 4s linear infinite; }
+  -webkit-animation: shake 33s 5s linear infinite;
+  animation: shake 33s 5s linear infinite; }
 
 .mask--2 {
-  -webkit-animation: shake 52s 7s linear infinite;
-  animation: shake 52s 7s linear infinite; }
+  -webkit-animation: shake 38s 6s linear infinite;
+  animation: shake 38s 6s linear infinite; }
 
 .image--3 {
-  -webkit-animation: shake 49s 11s linear infinite;
-  animation: shake 49s 11s linear infinite; }
+  -webkit-animation: shake 40s 9s linear infinite;
+  animation: shake 40s 9s linear infinite; }
 
 .mask--3 {
-  -webkit-animation: shake 60s 11s linear infinite;
-  animation: shake 60s 11s linear infinite; }
+  -webkit-animation: shake 38s 10s linear infinite;
+  animation: shake 38s 10s linear infinite; }
 
 .image--4 {
-  -webkit-animation: shake 39s 13s linear infinite;
-  animation: shake 39s 13s linear infinite; }
+  -webkit-animation: shake 54s 6s linear infinite;
+  animation: shake 54s 6s linear infinite; }
 
 .mask--4 {
-  -webkit-animation: shake 38s 7s linear infinite;
-  animation: shake 38s 7s linear infinite; }
+  -webkit-animation: shake 42s 12s linear infinite;
+  animation: shake 42s 12s linear infinite; }
 
 .image--5 {
-  -webkit-animation: shake 40s 6s linear infinite;
-  animation: shake 40s 6s linear infinite; }
+  -webkit-animation: shake 33s 12s linear infinite;
+  animation: shake 33s 12s linear infinite; }
 
 .mask--5 {
-  -webkit-animation: shake 40s 12s linear infinite;
-  animation: shake 40s 12s linear infinite; }
+  -webkit-animation: shake 34s 7s linear infinite;
+  animation: shake 34s 7s linear infinite; }
 
 .image--6 {
-  -webkit-animation: shake 50s 4s linear infinite;
-  animation: shake 50s 4s linear infinite; }
+  -webkit-animation: shake 60s 10s linear infinite;
+  animation: shake 60s 10s linear infinite; }
 
 .mask--6 {
-  -webkit-animation: shake 48s 11s linear infinite;
-  animation: shake 48s 11s linear infinite; }
+  -webkit-animation: shake 56s 4s linear infinite;
+  animation: shake 56s 4s linear infinite; }
 
 .image--7 {
-  -webkit-animation: shake 43s 8s linear infinite;
-  animation: shake 43s 8s linear infinite; }
-
-.mask--7 {
-  -webkit-animation: shake 54s 10s linear infinite;
-  animation: shake 54s 10s linear infinite; }
-
-.image--8 {
-  -webkit-animation: shake 35s 11s linear infinite;
-  animation: shake 35s 11s linear infinite; }
-
-.mask--8 {
   -webkit-animation: shake 51s 13s linear infinite;
   animation: shake 51s 13s linear infinite; }
 
+.mask--7 {
+  -webkit-animation: shake 34s 6s linear infinite;
+  animation: shake 34s 6s linear infinite; }
+
+.image--8 {
+  -webkit-animation: shake 54s 10s linear infinite;
+  animation: shake 54s 10s linear infinite; }
+
+.mask--8 {
+  -webkit-animation: shake 51s 4s linear infinite;
+  animation: shake 51s 4s linear infinite; }
+
 .image--9 {
-  -webkit-animation: shake 56s 9s linear infinite;
-  animation: shake 56s 9s linear infinite; }
+  -webkit-animation: shake 31s 9s linear infinite;
+  animation: shake 31s 9s linear infinite; }
 
 .mask--9 {
-  -webkit-animation: shake 44s 11s linear infinite;
-  animation: shake 44s 11s linear infinite; }
+  -webkit-animation: shake 34s 9s linear infinite;
+  animation: shake 34s 9s linear infinite; }
 
 .image--10 {
-  -webkit-animation: shake 40s 4s linear infinite;
-  animation: shake 40s 4s linear infinite; }
+  -webkit-animation: shake 39s 12s linear infinite;
+  animation: shake 39s 12s linear infinite; }
 
 .mask--10 {
-  -webkit-animation: shake 50s 4s linear infinite;
-  animation: shake 50s 4s linear infinite; }
+  -webkit-animation: shake 39s 8s linear infinite;
+  animation: shake 39s 8s linear infinite; }
 
 .text {
   font-size: 1.77778rem;
   line-height: 2rem;
-  -webkit-animation: shake 52s 7s linear infinite;
-  animation: shake 52s 7s linear infinite; }
+  -webkit-animation: shake 47s 7s linear infinite;
+  animation: shake 47s 7s linear infinite; }
 
 .tspan {
   -webkit-animation: glitch 17s infinite;
