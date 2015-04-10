@@ -269,14 +269,33 @@ h1 {
   #{$link} {
     background: url('../images/box.jpg') no-repeat scroll center;
     background-size: cover;
-    display: block;
     height: 0;
     padding-top: size(spacer)*6;
-    position: relative;
 
     @include at(40em) {
       padding-top: percentage(300/1000);
     }
+  }
+
+  .fake-button {
+    left: 50%;
+    max-width: 25rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transform: translate3d(-50%, -50%, 0);
+    width: 90%;
+  }
+}
+
+
+// Link Section
+// ------------
+
+.link-section {
+  #{$link} {
+    display: block;
+    position: relative;
   }
 
   #{$focus} {
@@ -291,8 +310,24 @@ h1 {
   .fake-button {
     @include button-ish;
     display: inline-block;
+  }
+}
+
+
+// OddBook
+// -------
+
+.oddbook {
+  position: relative;
+
+  p {
+    padding: size(gutter) size(spacer)*2;
+  }
+
+  .fake-button {
+    @include button-ish;
     left: 50%;
-    max-width: 25rem;
+    max-width: 14rem;
     position: absolute;
     text-align: center;
     top: 0;

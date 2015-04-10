@@ -1,9 +1,9 @@
 public: yes
 after:
-  - include: 'components/_release.html.j2'
   - include: 'components/_intro.html.j2'
-  - include: 'components/_box.html.j2'
+  - include: 'components/_oddbook.html.j2'
   - include: 'components/_blurb.html.j2'
+  - include: 'components/_box.html.j2'
 
 
 Riding SideSaddle*

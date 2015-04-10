@@ -1,0 +1,71 @@
+// Logo
+// ====
+
+@keyframes logo-shift {
+  0%, 5%, 42%, 48%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10% {
+    transform: translate3d(-1px, -3px, 0);
+  }
+
+  20% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  30% {
+    transform: translate3d(0, 3px, 0);
+  }
+
+  40% {
+    transform: translate3d(1px, -1px, 0);
+  }
+
+  50% {
+    transform: translate3d(-1px, 3px, 0);
+  }
+
+  60% {
+    transform: translate3d(-5px, 1px, 0);
+  }
+
+  70% {
+    transform: translate3d(3px, 1px, 0);
+  }
+
+  80% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+
+  90% {
+    transform: translate3d(3px, 3px, 0);
+  }
+
+  95% {
+    transform: translate3d(1px, -3px, 0);
+  }
+}
+
+.oddbooks-logo {
+  width: 100%;
+
+  .layer-1,
+  .layer-2 {
+    animation: logo-shift linear infinite alternate both;
+    mix-blend-mode: multiply;
+  }
+
+  .layer-1 {
+    animation-delay: random(500)*.1ms;
+    animation-duration: random(30)+87s;
+    fill: color(logo-light);
+  }
+
+  .layer-2 {
+    animation-delay: random(500)*1ms;
+    animation-direction: alternate-reverse;
+    animation-duration: random(30)+87s;
+    fill: color(logo-dark);
+  }
+}
