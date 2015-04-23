@@ -84,7 +84,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   
   src: url('../fonts/franklin/franklingothic-bolditalic-webfont.woff2') format('woff2'), url('../fonts/franklin/franklingothic-bolditalic-webfont.woff') format('woff'), url('../fonts/franklin/franklingothic-bolditalic-webfont.ttf') format('truetype'); }
 
-.description, .blurb-cite, [role='contentinfo'] {
+.blurb-cite, .intro .description, [role='contentinfo'] {
   font-family: 'franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 @font-face {
@@ -140,16 +140,19 @@ a:hover, a:focus, a:active {
 
 .section {
   border-bottom: 2px dashed #c00;
-  padding: 4rem 0;
-  transition: all 300ms; }
-  @media (min-width: 45em) {
-    .section {
-      padding: 18vh 0; } }
+  position: relative; }
 
-.section-inner {
+.inner {
+  overflow: hidden; }
+
+.container {
   margin: 0 auto;
   max-width: 45rem;
-  padding: 1.33333rem; }
+  padding: 5.33333rem 1.33333rem;
+  transition: all 300ms; }
+  @media (min-width: 45em) {
+    .container {
+      padding: 18vh 0; } }
 
 h1 {
   font-size: 9vw;
@@ -160,11 +163,43 @@ h1 {
       font-size: 3.16667rem;
       line-height: 3.33333rem; } }
 
+b {
+  font-weight: bold; }
+
+.section-title {
+  left: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  white-space: nowrap;
+  z-index: 10; }
+
+.title-link {
+  min-width: 10%; }
+  .title-link, .title-link:link, .title-link:visited {
+    background: #fff;
+    border: 2px solid #c00;
+    border-radius: 0.55556rem;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.66667rem 2.38889rem;
+    text-align: center;
+    transition: all 150ms; }
+  .title-link:hover, .title-link:focus, .title-link:active {
+    background: #c00;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ad0000; }
+  .title-link:active {
+    border-color: #ad0000; }
+
 @media (min-width: 45em) {
   .page {
     background: url('../images/cover.jpg') no-repeat scroll top right;
-    background-size: auto 100%;
-    padding: 25vh 0; } }
+    background-size: auto 100%; }
+    .page .container {
+      padding: 25vh 1.33333rem; } }
 .page em {
   color: #666666;
   font-variant: small-caps; }
@@ -176,8 +211,10 @@ h1 {
   background: #fff;
   border: 2px solid #c00;
   border-radius: 0.55556rem;
+  display: inline-block;
   font-weight: bold;
   padding: 0.66667rem 2.38889rem;
+  text-align: center;
   transition: all 150ms; }
 .page [href*='springgunpress.com']:hover, .page [href*='springgunpress.com']:focus, .page [href*='springgunpress.com']:active {
   background: #c00;
@@ -187,86 +224,38 @@ h1 {
 .page [href*='springgunpress.com']:active {
   border-color: #ad0000; }
 
-.release {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 8rem, rgba(255, 255, 255, 0) 18.66667rem) no-repeat scroll, url('../images/tg-jen.jpg') no-repeat scroll;
+.bookstore {
+  min-height: 60vh; }
+  .bookstore .map, .bookstore .map-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; }
+  .bookstore .map-overlay {
+    z-index: 2; }
+
+.tour {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 8rem, rgba(255, 255, 255, 0) 13.33333rem) no-repeat scroll, url('../images/tg-jen.jpg') no-repeat scroll;
   background-clip: padding-box;
   background-size: cover;
-  padding: 6.66667rem 0 1.33333rem;
   position: relative; }
-  @media (min-width: 45em) {
-    .release {
-      padding: 50vh 0 1.33333rem; } }
-  .release .p-name {
+  .tour .container {
+    padding: 10.66667rem 1.33333rem 2.66667rem; }
+    @media (min-width: 45em) {
+      .tour .container {
+        padding: 60vh 1.33333rem 4rem; } }
+  .tour .p-name {
     font-size: 5vw;
     line-height: 6.66667vw;
     margin-bottom: 0.66667rem; }
     @media (min-width: 53.75em) {
-      .release .p-name {
+      .tour .p-name {
         font-size: 2.38889rem;
         line-height: 2.66667rem; } }
-  .release .sub {
-    font-variant: small-caps; }
-  .release a:link, .release a:visited {
-    font-variant: normal;
-    font-weight: bold; }
-
-.call-to-action {
-  font-size: 5vw;
-  line-height: 6.66667vw;
-  background: #fff;
-  border: 2px solid #c00;
-  font-weight: bold;
-  left: 50%;
-  padding: 1.33333rem;
-  position: absolute;
-  top: 0;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  white-space: nowrap; }
-  @media (min-width: 40em) {
-    .call-to-action {
-      font-size: 1.77778rem;
-      line-height: 2rem; } }
-
-.p-summary {
-  font-variant: small-caps; }
-
-.presenters {
-  font-variant: small-caps; }
-  .presenters a:link, .presenters a:visited {
-    font-size: 9vw;
-    line-height: 12vw; }
-    @media (min-width: 39.58333em) {
-      .presenters a:link, .presenters a:visited {
-        font-size: 3.16667rem;
-        line-height: 3.33333rem; } }
-
-.event-details {
-  list-style: disc;
-  margin: 0.66667rem 0; }
-
-.press-kit:link, .press-kit:visited {
-  background: #fff;
-  border: 2px solid #c00;
-  color: #000;
-  display: inline-block;
-  left: 50%;
-  padding: 1.33333rem;
-  position: absolute;
-  top: 100%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  transition: all 300ms; }
-.press-kit:hover, .press-kit:focus, .press-kit:active {
-  text-decoration: none;
-  -webkit-transform: translate3d(-50%, -50%, 0) scale(1.25);
-  transform: translate3d(-50%, -50%, 0) scale(1.25); }
-.press-kit b {
-  color: #c00; }
-
-.intro {
-  overflow: hidden; }
-  .intro b {
+  .tour a:link, .tour a:visited {
     font-weight: bold; }
 
 .pullquote {
@@ -327,10 +316,6 @@ h1 {
     justify-content: center;
     padding: 0 15%; }
 
-.description {
-  color: #666666;
-  margin: 0 2.66667rem; }
-
 .blurb + .blurb {
   margin-top: 2.66667rem; }
 
@@ -356,76 +341,16 @@ h1 {
 .blurb-cite {
   color: #666666; }
 
-.box:link, .box:visited {
-  background: url('../images/box.jpg') no-repeat scroll center;
-  background-size: cover;
-  height: 0;
-  padding-top: 14.33333rem; }
-  @media (min-width: 40em) {
-    .box:link, .box:visited {
-      padding-top: 30%; } }
-.box .fake-button {
-  left: 50%;
-  max-width: 25rem;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-  width: 90%; }
+.intro {
+  background: url('../images/open-box.jpg') no-repeat scroll center;
+  background-size: cover; }
+  @media (min-width: 45em) {
+    .intro .container {
+      margin: 0 10% 0 40%;
+      padding: 25vh 1.33333rem; } }
 
-.link-section:link, .link-section:visited {
-  display: block;
-  position: relative; }
-.link-section:hover, .link-section:focus, .link-section:active {
-  outline: 0;
-  text-decoration: none; }
-  .link-section:hover .fake-button, .link-section:focus .fake-button, .link-section:active .fake-button {
-    text-decoration: underline; }
-.link-section .fake-button {
-  display: inline-block; }
-  .link-section .fake-button, .link-section .fake-button:link, .link-section .fake-button:visited {
-    background: #fff;
-    border: 2px solid #c00;
-    border-radius: 0.55556rem;
-    font-weight: bold;
-    padding: 0.66667rem 2.38889rem;
-    transition: all 150ms; }
-  .link-section .fake-button:hover, .link-section .fake-button:focus, .link-section .fake-button:active {
-    background: #c00;
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #ad0000; }
-  .link-section .fake-button:active {
-    border-color: #ad0000; }
-
-.oddbook {
-  position: relative; }
-  .oddbook p {
-    padding: 1.33333rem 4.77778rem; }
-  .oddbook .fake-button {
-    left: 50%;
-    max-width: 14rem;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-    width: 90%; }
-    .oddbook .fake-button, .oddbook .fake-button:link, .oddbook .fake-button:visited {
-      background: #fff;
-      border: 2px solid #c00;
-      border-radius: 0.55556rem;
-      font-weight: bold;
-      padding: 0.66667rem 2.38889rem;
-      transition: all 150ms; }
-    .oddbook .fake-button:hover, .oddbook .fake-button:focus, .oddbook .fake-button:active {
-      background: #c00;
-      color: #fff;
-      text-decoration: none;
-      text-shadow: 0 1px 0 #ad0000; }
-    .oddbook .fake-button:active {
-      border-color: #ad0000; }
+.oddbook p {
+  padding: 1.33333rem 4.77778rem; }
 
 [role='contentinfo'] {
   font-size: 0.77778rem;
@@ -538,18 +463,18 @@ h1 {
     animation: logo-shift linear infinite alternate both;
     mix-blend-mode: multiply; }
   .oddbooks-logo .layer-1 {
-    -webkit-animation-delay: 2.3ms;
-    animation-delay: 2.3ms;
-    -webkit-animation-duration: 117s;
-    animation-duration: 117s;
+    -webkit-animation-delay: 29.2ms;
+    animation-delay: 29.2ms;
+    -webkit-animation-duration: 95s;
+    animation-duration: 95s;
     fill: #cb8129; }
   .oddbooks-logo .layer-2 {
-    -webkit-animation-delay: 355ms;
-    animation-delay: 355ms;
+    -webkit-animation-delay: 161ms;
+    animation-delay: 161ms;
     -webkit-animation-direction: alternate-reverse;
     animation-direction: alternate-reverse;
-    -webkit-animation-duration: 107s;
-    animation-duration: 107s;
+    -webkit-animation-duration: 100s;
+    animation-duration: 100s;
     fill: #b32356; }
 
 @-webkit-keyframes blur {
@@ -749,90 +674,90 @@ h1 {
   animation: blur 21s 3s ease infinite; }
 
 .image--1 {
-  -webkit-animation: shake 43s 5s linear infinite;
-  animation: shake 43s 5s linear infinite; }
+  -webkit-animation: shake 57s 13s linear infinite;
+  animation: shake 57s 13s linear infinite; }
 
 .mask--1 {
-  -webkit-animation: shake 47s 12s linear infinite;
-  animation: shake 47s 12s linear infinite; }
+  -webkit-animation: shake 34s 11s linear infinite;
+  animation: shake 34s 11s linear infinite; }
 
 .image--2 {
-  -webkit-animation: shake 33s 5s linear infinite;
-  animation: shake 33s 5s linear infinite; }
+  -webkit-animation: shake 31s 7s linear infinite;
+  animation: shake 31s 7s linear infinite; }
 
 .mask--2 {
-  -webkit-animation: shake 38s 6s linear infinite;
-  animation: shake 38s 6s linear infinite; }
+  -webkit-animation: shake 55s 8s linear infinite;
+  animation: shake 55s 8s linear infinite; }
 
 .image--3 {
-  -webkit-animation: shake 40s 9s linear infinite;
-  animation: shake 40s 9s linear infinite; }
+  -webkit-animation: shake 58s 13s linear infinite;
+  animation: shake 58s 13s linear infinite; }
 
 .mask--3 {
-  -webkit-animation: shake 38s 10s linear infinite;
-  animation: shake 38s 10s linear infinite; }
+  -webkit-animation: shake 34s 8s linear infinite;
+  animation: shake 34s 8s linear infinite; }
 
 .image--4 {
-  -webkit-animation: shake 54s 6s linear infinite;
-  animation: shake 54s 6s linear infinite; }
+  -webkit-animation: shake 47s 8s linear infinite;
+  animation: shake 47s 8s linear infinite; }
 
 .mask--4 {
-  -webkit-animation: shake 42s 12s linear infinite;
-  animation: shake 42s 12s linear infinite; }
-
-.image--5 {
-  -webkit-animation: shake 33s 12s linear infinite;
-  animation: shake 33s 12s linear infinite; }
-
-.mask--5 {
-  -webkit-animation: shake 34s 7s linear infinite;
-  animation: shake 34s 7s linear infinite; }
-
-.image--6 {
-  -webkit-animation: shake 60s 10s linear infinite;
-  animation: shake 60s 10s linear infinite; }
-
-.mask--6 {
-  -webkit-animation: shake 56s 4s linear infinite;
-  animation: shake 56s 4s linear infinite; }
-
-.image--7 {
-  -webkit-animation: shake 51s 13s linear infinite;
-  animation: shake 51s 13s linear infinite; }
-
-.mask--7 {
-  -webkit-animation: shake 34s 6s linear infinite;
-  animation: shake 34s 6s linear infinite; }
-
-.image--8 {
   -webkit-animation: shake 54s 10s linear infinite;
   animation: shake 54s 10s linear infinite; }
 
+.image--5 {
+  -webkit-animation: shake 48s 6s linear infinite;
+  animation: shake 48s 6s linear infinite; }
+
+.mask--5 {
+  -webkit-animation: shake 53s 13s linear infinite;
+  animation: shake 53s 13s linear infinite; }
+
+.image--6 {
+  -webkit-animation: shake 34s 8s linear infinite;
+  animation: shake 34s 8s linear infinite; }
+
+.mask--6 {
+  -webkit-animation: shake 40s 12s linear infinite;
+  animation: shake 40s 12s linear infinite; }
+
+.image--7 {
+  -webkit-animation: shake 45s 13s linear infinite;
+  animation: shake 45s 13s linear infinite; }
+
+.mask--7 {
+  -webkit-animation: shake 48s 10s linear infinite;
+  animation: shake 48s 10s linear infinite; }
+
+.image--8 {
+  -webkit-animation: shake 57s 5s linear infinite;
+  animation: shake 57s 5s linear infinite; }
+
 .mask--8 {
-  -webkit-animation: shake 51s 4s linear infinite;
-  animation: shake 51s 4s linear infinite; }
+  -webkit-animation: shake 41s 10s linear infinite;
+  animation: shake 41s 10s linear infinite; }
 
 .image--9 {
-  -webkit-animation: shake 31s 9s linear infinite;
-  animation: shake 31s 9s linear infinite; }
+  -webkit-animation: shake 54s 11s linear infinite;
+  animation: shake 54s 11s linear infinite; }
 
 .mask--9 {
-  -webkit-animation: shake 34s 9s linear infinite;
-  animation: shake 34s 9s linear infinite; }
+  -webkit-animation: shake 47s 5s linear infinite;
+  animation: shake 47s 5s linear infinite; }
 
 .image--10 {
-  -webkit-animation: shake 39s 12s linear infinite;
-  animation: shake 39s 12s linear infinite; }
+  -webkit-animation: shake 59s 10s linear infinite;
+  animation: shake 59s 10s linear infinite; }
 
 .mask--10 {
-  -webkit-animation: shake 39s 8s linear infinite;
-  animation: shake 39s 8s linear infinite; }
+  -webkit-animation: shake 32s 13s linear infinite;
+  animation: shake 32s 13s linear infinite; }
 
 .text {
   font-size: 1.77778rem;
   line-height: 2rem;
-  -webkit-animation: shake 47s 7s linear infinite;
-  animation: shake 47s 7s linear infinite; }
+  -webkit-animation: shake 35s 12s linear infinite;
+  animation: shake 35s 12s linear infinite; }
 
 .tspan {
   -webkit-animation: glitch 17s infinite;
