@@ -1,6 +1,11 @@
 ---
 # blurbs
 blurbs:
+  - cite: 'Ryo Yamaguchi'
+    org: 'Michigan Quarterly Review'
+    org_url: 'http://www.michiganquarterlyreview.com/2015/06/on-riding-sidesaddle-an-interview-with-eric-suzanne/'
+    body: 'It’s a new, and wonderful, adventure each time, a story of outcasts, their caretaker, and the friendship and love they find with each other. It’s a story about the body and hybridity — based on the myth of Hermaphroditus — and it’s a story about magic and the slipperiness of categories.'
+
   - cite: 'Tim Wenger'
     org: 'Colorado Music Buzz'
     org_url: 'http://www.colomusicbuzz.com/eric-suzanne-drops-non-linear-novel-in-conjunction-with-teacup-gorilla/'
@@ -20,6 +25,24 @@ blurbs:
     org: 'Lead Designer/Developer of Sass'
     org_url: 'http://sass-lang.com'
     body: "This feels more realistic than any other novel could hope to be: every moment is just one in a sea of other moments, no more or less important, although no less interesting for that. The result is an impressionist array of feelings and emotions and understandings of oneself and others."
+
+
+# bookstores
+bookstores:
+  - name: 'City Stacks'
+    url: 'http://citystacks.com/'
+    map: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12269.654265407033!2d-104.99836!3d39.752822!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa97abbd4a7f42bea!2sCity+Stacks%3A+Books+%26+Coffee!5e0!3m2!1sen!2sus!4v1429742157984" frameborder="0" allowfullscreen></iframe>'
+    map_url: 'https://goo.gl/maps/Ut96qV5wfjH2'
+
+  - name: 'BookBar'
+    url: 'http://www.bookbardenver.com/'
+    map: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.4188085740097!2d-105.04592374916518!3d39.77515567934403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b87834cbde143%3A0xca66932a7463491!2sBookBar!5e0!3m2!1sen!2sus!4v1444580367816" frameborder="0" allowfullscreen></iframe>'
+    map_url: 'https://goo.gl/maps/QjXJzYnoteS2'
+
+  - name: 'Prairie Lights'
+    url: 'http://www.prairielights.com/'
+    map: '<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11923.07832368945!2d-91.5330805!3d41.6607202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xce217904fc3880ec!2sPrairie+Lights+Books+%26+Cafe!5e0!3m2!1sen!2sus!4v1444583406361" frameborder="0" allowfullscreen></iframe>'
+    map_url: 'https://goo.gl/maps/KNKRX6zNT5G2'
 
 
 # defaults

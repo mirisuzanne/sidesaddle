@@ -12,7 +12,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 45rem;
+  max-width: size('page');
   padding: size(gutter)*4 size(gutter);
   transition: all 300ms;
 
@@ -102,49 +102,75 @@ b {
 // Bookstore
 // ---------
 
-.bookstore {
-  min-height: 60vh;
+.maps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15vh size('gutter');
 
-  .map,
-  .map-overlay {
-    @include stretch;
-    height: 100%;
+  iframe {
     width: 100%;
+    height: 30vw;
   }
+}
 
-  .map-overlay {
-    z-index: 2;
-  }
+.store {
+  flex: 1 1 14rem;
+  margin: size('shim');
+}
+
+.store-name {
+  @include font-size('h3');
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-overlay {
+  @include stretch;
 }
 
 
 // Tour
 // ----
 
-.tour {
-  background: linear-gradient(to top, color(overlay) size(rhythm)*6, color(overlay (rgba: 0)) size(rhythm)*10) no-repeat scroll,
-              url('../images/tg-jen.jpg') no-repeat scroll;
+.music {
+  background: url('../images/ums.jpg') no-repeat scroll bottom;
   background-clip: padding-box;
   background-size: cover;
-  position: relative;
 
   .container {
-    padding: size(gutter)*8 size(gutter) size(gutter)*2;
-
-    @include at(45em) {
-      padding: 60vh size(gutter) size(gutter)*3;
-    }
+    max-width: 700px;
   }
 
-  .p-name {
-    @include relative-font(5vw, h2);
-    margin-bottom: size(shim);
+  .album-info {
+    background: color('background' ('rgba': .9));
+    font-style: italic;
+    padding: size('shim');
+  }
+}
+
+
+// Art
+// ---
+
+.art-gallery {
+  background: url('../images/art.jpg') no-repeat scroll;
+  background-clip: padding-box;
+  background-size: cover;
+  padding-top: 60vh;
+
+  .container {
+    background: color('background' ('rgba': .9));
+    padding: size('gutter') size('gutter') size('spacer');
+    max-width: 100%;
   }
 
-  a {
-    #{$link} {
-      font-weight: bold;
-    }
+  .art-info {
+    @include font-size('h3', 2);
+    margin: 0 auto;
+    max-width: size('page');
   }
 }
 
