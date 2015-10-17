@@ -1,2 +1,2 @@
-# ridingsidesaddle.net
+# ridingsidesaddle.com
 Riding SideSaddle*
