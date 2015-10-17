@@ -59,7 +59,7 @@ fb_image: 'box.jpg'
 
 # Site Config
 active_modules: [blog, typogrify, author, wrap]
-canonical_url: http://www.ridingsidesaddle.net/
+canonical_url: http://www.ridingsidesaddle.com/
 output_folder: ../../sidesaddle-pages
 template_path: ../templates
 modules:
