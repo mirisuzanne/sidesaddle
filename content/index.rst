@@ -11,7 +11,7 @@ after:
 Riding SideSaddle*
 ==================
 
-`Eric M Suzanne`_
+`Eric Miriam Suzanne`_
 *a novel*
 
-.. _Eric M Suzanne: http://ericsuzanne.com/
+.. _Eric Miriam Suzanne: http://miriamsuzanne.com/
