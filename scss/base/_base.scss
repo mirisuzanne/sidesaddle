@@ -7,11 +7,13 @@
 @import 'scale.config';
 @import 'fonts.config';
 
-@include fonts;
+@import '../../node_modules/accoutrement-init/sass/init';
+
+@include import-webfonts;
 @include global-box-sizing;
 
 html {
-  @extend %body;
+  @include font-family('body');
   @include baseline;
   background: color(background);
   color: color(text);

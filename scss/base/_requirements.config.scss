@@ -1,12 +1,9 @@
 // Sass Requirements
 // =================
 
-@import '../../bower_components/accoutrement-color/sass/color';
-@import '../../bower_components/accoutrement-fonts/sass/fonts';
-@import '../../bower_components/accoutrement-layout/sass/layout';
-@import '../../bower_components/accoutrement-maps/sass/maps';
-@import '../../bower_components/accoutrement-pseudo/sass/pseudo-elements';
-@import '../../bower_components/accoutrement-reset/sass/reset';
-@import '../../bower_components/accoutrement-scale/sass/scale';
-@import '../../bower_components/accoutrement-strings/sass/strings';
-@import '../../bower_components/accoutrement-queries/sass/queries';
+@import '../../node_modules/accoutrement-color/sass/color';
+@import '../../node_modules/accoutrement-fonts/sass/fonts';
+@import '../../node_modules/accoutrement-layout/sass/layout';
+@import '../../node_modules/accoutrement-pseudo/sass/pseudo-elements';
+@import '../../node_modules/accoutrement-scale/sass/scale';
+@import '../../node_modules/accoutrement-queries/sass/queries';

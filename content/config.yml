@@ -46,13 +46,13 @@ bookstores:
 
 
 # defaults
-title: Riding SideSaddle*
-author: eric
-author_full: Eric Miriam Suzanne
+title: 'Riding SideSaddle*'
+author: 'Miriam'
+author_full: '(Eric) Miriam Suzanne'
 location: home
-copyright: 2015
-description: An open-source novel on notecards — created by Eric Miriam Suzanne, and published by SpringGun Press.
-longdesc: "Riding SideSaddle* is an open-source novel on notecards - a fragmented memory of our time together, and these bodies we inhabit - created by Eric Suzanne, with contributions from Jacob Liechty and others. Published by SpringGun Press."
+copyright: 2016
+description: An open-source novel on notecards — created by (Eric) Miriam Suzanne, and published by SpringGun Press.
+longdesc: "Riding SideSaddle* is an open-source novel on notecards - a fragmented memory of our time together, and these bodies we inhabit - created by (Eric) Miriam Suzanne, with contributions from Jacob Liechty and others. Published by SpringGun Press."
 keywords: novel, elit, experimental, art, collage, open-source, creative commons, oddbook
 fb_image: 'box.jpg'
 

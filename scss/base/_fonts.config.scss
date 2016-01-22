@@ -4,17 +4,21 @@
 $font-formats: 'woff2' 'woff' 'ttf';
 
 $fonts: (
-  boilerplate: (
-    name: 'franklin',
-    path: 'franklin/franklingothic-%s%s-webfont',
-    styles: (regular, bold, italic, bold italic),
-    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  'boilerplate': (
+    'name': 'franklin',
+    'regular': 'franklin/franklingothic-regular-webfont',
+    'bold': 'franklin/franklingothic-bold-webfont',
+    'italic': 'franklin/franklingothic-italic-webfont',
+    'bold' 'italic': 'franklin/franklingothic-bolditalic-webfont',
+    'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   ),
 
   body: (
-    name: 'rockingham',
-    path: 'rockingham/rockingham-%s%s-webfont',
-    styles: (regular, bold, italic, bold italic),
-    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+    'name': 'rockingham',
+    'regular': 'rockingham/rockingham-regular-webfont',
+    'bold': 'rockingham/rockingham-bold-webfont',
+    'italic': 'rockingham/rockingham-italic-webfont',
+    'bold' 'italic': 'rockingham/rockingham-bolditalic-webfont',
+    'stack': ('Helvetica Neue', Helvetica, Arial, sans-serif),
   ),
 );

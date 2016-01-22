@@ -21,120 +21,212 @@
  *
  *
  */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline; }
-
 html {
-  line-height: 1; }
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
 
-ol,
-ul {
-  list-style: none; }
+main {
+  display: block; }
+
+details {
+  display: block; }
+
+pre {
+  overflow: auto; }
+
+progress {
+  display: inline-block; }
+
+summary {
+  display: block; }
+
+template {
+  display: none; }
+
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box; }
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
+audio :not([controls]) {
+  display: none; }
+
+[aria-busy='true'] {
+  cursor: progress; }
+
+[aria-controls] {
+  cursor: pointer; }
+
+[aria-disabled] {
+  cursor: default; }
+
+[hidden] {
+  display: none; }
+
+button {
+  appearance: button;
+  overflow: visible; }
+
+input {
+  border-radius: 0;
+  line-height: normal; }
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: button;
+  cursor: pointer; }
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type='number'] {
+  width: auto; }
+
+[type='search'] {
+  appearance: textfield; }
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  max-width: 100%;
   vertical-align: middle; }
 
-q,
-blockquote {
-  quotes: none; }
-  q:before,
-  q:after,
-  blockquote:before, blockquote:after {
-    content: "";
-    content: none; }
+a {
+  background-color: transparent; }
+  a:active, a:hover {
+    outline: 0; }
 
-a img {
-  border: none; }
+abbr[title] {
+  border-bottom: 1px dotted; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+b,
+strong {
+  font-weight: bold; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: inherit; }
+
+dfn {
+  font-style: italic; }
+
+nav ol,
+nav ul {
+  list-style: none; }
+
+small {
+  font-size: 0.75em; }
+
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
 
 @font-face {
   font-family: "franklin";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/"franklin/franklingothic-regular-webfont.woff2"') format("woff2"), url('../fonts/"franklin/franklingothic-regular-webfont.woff"') format("woff"), url('../fonts/"franklin/franklingothic-regular-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/franklin/franklingothic-regular-webfont.woff2") format("woff2"), url("../fonts/franklin/franklingothic-regular-webfont.woff") format("woff"), url("../fonts/franklin/franklingothic-regular-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "franklin";
   font-style: normal;
   font-weight: bold;
-  src: url('../fonts/"franklin/franklingothic-bold-webfont.woff2"') format("woff2"), url('../fonts/"franklin/franklingothic-bold-webfont.woff"') format("woff"), url('../fonts/"franklin/franklingothic-bold-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/franklin/franklingothic-bold-webfont.woff2") format("woff2"), url("../fonts/franklin/franklingothic-bold-webfont.woff") format("woff"), url("../fonts/franklin/franklingothic-bold-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "franklin";
   font-style: italic;
   font-weight: normal;
-  src: url('../fonts/"franklin/franklingothic-italic-webfont.woff2"') format("woff2"), url('../fonts/"franklin/franklingothic-italic-webfont.woff"') format("woff"), url('../fonts/"franklin/franklingothic-italic-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/franklin/franklingothic-italic-webfont.woff2") format("woff2"), url("../fonts/franklin/franklingothic-italic-webfont.woff") format("woff"), url("../fonts/franklin/franklingothic-italic-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "franklin";
   font-style: italic;
   font-weight: bold;
-  src: url('../fonts/"franklin/franklingothic-bolditalic-webfont.woff2"') format("woff2"), url('../fonts/"franklin/franklingothic-bolditalic-webfont.woff"') format("woff"), url('../fonts/"franklin/franklingothic-bolditalic-webfont.ttf"') format("truetype"); }
-
-.blurb-cite, .intro .description, [role='contentinfo'] {
-  font-family: "franklin", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  src: url("../fonts/franklin/franklingothic-bolditalic-webfont.woff2") format("woff2"), url("../fonts/franklin/franklingothic-bolditalic-webfont.woff") format("woff"), url("../fonts/franklin/franklingothic-bolditalic-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rockingham";
   font-style: normal;
   font-weight: normal;
-  src: url('../fonts/"rockingham/rockingham-regular-webfont.woff2"') format("woff2"), url('../fonts/"rockingham/rockingham-regular-webfont.woff"') format("woff"), url('../fonts/"rockingham/rockingham-regular-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/rockingham/rockingham-regular-webfont.woff2") format("woff2"), url("../fonts/rockingham/rockingham-regular-webfont.woff") format("woff"), url("../fonts/rockingham/rockingham-regular-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rockingham";
   font-style: normal;
   font-weight: bold;
-  src: url('../fonts/"rockingham/rockingham-bold-webfont.woff2"') format("woff2"), url('../fonts/"rockingham/rockingham-bold-webfont.woff"') format("woff"), url('../fonts/"rockingham/rockingham-bold-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/rockingham/rockingham-bold-webfont.woff2") format("woff2"), url("../fonts/rockingham/rockingham-bold-webfont.woff") format("woff"), url("../fonts/rockingham/rockingham-bold-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rockingham";
   font-style: italic;
   font-weight: normal;
-  src: url('../fonts/"rockingham/rockingham-italic-webfont.woff2"') format("woff2"), url('../fonts/"rockingham/rockingham-italic-webfont.woff"') format("woff"), url('../fonts/"rockingham/rockingham-italic-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/rockingham/rockingham-italic-webfont.woff2") format("woff2"), url("../fonts/rockingham/rockingham-italic-webfont.woff") format("woff"), url("../fonts/rockingham/rockingham-italic-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rockingham";
   font-style: italic;
   font-weight: bold;
-  src: url('../fonts/"rockingham/rockingham-bolditalic-webfont.woff2"') format("woff2"), url('../fonts/"rockingham/rockingham-bolditalic-webfont.woff"') format("woff"), url('../fonts/"rockingham/rockingham-bolditalic-webfont.ttf"') format("truetype"); }
+  src: url("../fonts/rockingham/rockingham-bolditalic-webfont.woff2") format("woff2"), url("../fonts/rockingham/rockingham-bolditalic-webfont.woff") format("woff"), url("../fonts/rockingham/rockingham-bolditalic-webfont.ttf") format("truetype"); }
 
-html, .text {
-  font-family: "rockingham", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: border-box; }
 
 html {
+  font-family: "rockingham", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 112.5%;
   line-height: 1.33333em;
   background: #fff;
@@ -192,8 +284,7 @@ b {
 
 .title-link {
   min-width: 10%; }
-  .title-link,
-  .title-link:link, .title-link:visited {
+  .title-link, .title-link:link, .title-link:visited {
     background: #fff;
     border: 2px solid #c00;
     border-radius: 0.55556rem;
@@ -226,8 +317,7 @@ b {
 .page p:not(:last-child) {
   margin-bottom: 2.38889rem; }
 
-.page [href*='springgunpress.com'],
-.page [href*='springgunpress.com']:link, .page [href*='springgunpress.com']:visited {
+.page [href*='springgunpress.com'], .page [href*='springgunpress.com']:link, .page [href*='springgunpress.com']:visited {
   background: #fff;
   border: 2px solid #c00;
   border-radius: 0.55556rem;
@@ -275,11 +365,11 @@ b {
   position: relative; }
 
 .map-overlay {
-  position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  position: absolute;
+  right: 0;
+  top: 0; }
 
 .music {
   background: url("../images/ums.jpg") no-repeat scroll bottom;
@@ -293,19 +383,29 @@ b {
     padding: 0.66667rem; }
 
 .art-gallery {
-  background: url("../images/art.jpg") no-repeat scroll;
+  background: url("../images/dance.jpg") no-repeat scroll;
   background-clip: padding-box;
   background-size: cover;
   padding-top: 60vh; }
   .art-gallery .container {
     background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #666666;
     padding: 1.33333rem 1.33333rem 2.38889rem;
     max-width: 100%; }
   .art-gallery .art-info {
-    font-size: 1.77778rem;
-    line-height: 2.66667rem;
     margin: 0 auto;
     max-width: 45rem; }
+  .art-gallery a {
+    font-weight: bold; }
+  .art-gallery p {
+    font-style: italic;
+    margin: 1.33333rem; }
+  .art-gallery h3 {
+    text-align: center; }
+  .art-gallery b {
+    font-size: 3.16667rem;
+    line-height: 3.33333rem;
+    display: inline-block; }
 
 .pullquote {
   font-size: 4vw;
@@ -323,11 +423,11 @@ b {
       line-height: 2rem; } }
   .pullquote:before, .pullquote:after {
     content: " ";
-    position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
+    top: 0;
     background: #fff no-repeat scroll;
     background-size: 100% auto;
     border: 1px solid #666666;
@@ -349,11 +449,11 @@ b {
     -webkit-transform: rotate(-3deg) translate3d(-10%, -30%, 0);
     transform: rotate(-3deg) translate3d(-10%, -30%, 0); }
   .pullquote p {
-    position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
+    top: 0;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -389,6 +489,7 @@ b {
     width: 1.33333rem; }
 
 .blurb-cite {
+  font-family: "franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #666666; }
 
 .intro {
@@ -398,11 +499,14 @@ b {
     .intro .container {
       margin: 0 10% 0 40%;
       padding: 25vh 1.33333rem; } }
+  .intro .description {
+    font-family: "franklin", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .oddbook p {
   padding: 1.33333rem 4.77778rem; }
 
 [role='contentinfo'] {
+  font-family: "franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.77778rem;
   line-height: 1.33333rem;
   color: #666666;
@@ -496,18 +600,18 @@ b {
     animation: logo-shift linear infinite alternate both;
     mix-blend-mode: multiply; }
   .oddbooks-logo .layer-1 {
-    -webkit-animation-delay: 10.1ms;
-    animation-delay: 10.1ms;
-    -webkit-animation-duration: 111s;
-    animation-duration: 111s;
+    -webkit-animation-delay: 37.3ms;
+    animation-delay: 37.3ms;
+    -webkit-animation-duration: 113s;
+    animation-duration: 113s;
     fill: #cb8129; }
   .oddbooks-logo .layer-2 {
-    -webkit-animation-delay: 170ms;
-    animation-delay: 170ms;
+    -webkit-animation-delay: 373ms;
+    animation-delay: 373ms;
     -webkit-animation-direction: alternate-reverse;
     animation-direction: alternate-reverse;
-    -webkit-animation-duration: 105s;
-    animation-duration: 105s;
+    -webkit-animation-duration: 98s;
+    animation-duration: 98s;
     fill: #b32356; }
 
 @-webkit-keyframes blur {
@@ -669,90 +773,91 @@ b {
   animation: blur 21s 3s ease infinite; }
 
 .image--1 {
-  -webkit-animation: shake 55s 13s linear infinite;
-  animation: shake 55s 13s linear infinite; }
+  -webkit-animation: shake 31s 10s linear infinite;
+  animation: shake 31s 10s linear infinite; }
 
 .mask--1 {
-  -webkit-animation: shake 42s 7s linear infinite;
-  animation: shake 42s 7s linear infinite; }
-
-.image--2 {
-  -webkit-animation: shake 55s 11s linear infinite;
-  animation: shake 55s 11s linear infinite; }
-
-.mask--2 {
-  -webkit-animation: shake 43s 7s linear infinite;
-  animation: shake 43s 7s linear infinite; }
-
-.image--3 {
-  -webkit-animation: shake 59s 4s linear infinite;
-  animation: shake 59s 4s linear infinite; }
-
-.mask--3 {
-  -webkit-animation: shake 34s 5s linear infinite;
-  animation: shake 34s 5s linear infinite; }
-
-.image--4 {
   -webkit-animation: shake 59s 13s linear infinite;
   animation: shake 59s 13s linear infinite; }
 
+.image--2 {
+  -webkit-animation: shake 45s 9s linear infinite;
+  animation: shake 45s 9s linear infinite; }
+
+.mask--2 {
+  -webkit-animation: shake 31s 12s linear infinite;
+  animation: shake 31s 12s linear infinite; }
+
+.image--3 {
+  -webkit-animation: shake 57s 12s linear infinite;
+  animation: shake 57s 12s linear infinite; }
+
+.mask--3 {
+  -webkit-animation: shake 34s 8s linear infinite;
+  animation: shake 34s 8s linear infinite; }
+
+.image--4 {
+  -webkit-animation: shake 41s 11s linear infinite;
+  animation: shake 41s 11s linear infinite; }
+
 .mask--4 {
-  -webkit-animation: shake 32s 9s linear infinite;
-  animation: shake 32s 9s linear infinite; }
+  -webkit-animation: shake 46s 8s linear infinite;
+  animation: shake 46s 8s linear infinite; }
 
 .image--5 {
-  -webkit-animation: shake 55s 13s linear infinite;
-  animation: shake 55s 13s linear infinite; }
+  -webkit-animation: shake 51s 8s linear infinite;
+  animation: shake 51s 8s linear infinite; }
 
 .mask--5 {
-  -webkit-animation: shake 45s 12s linear infinite;
-  animation: shake 45s 12s linear infinite; }
+  -webkit-animation: shake 51s 13s linear infinite;
+  animation: shake 51s 13s linear infinite; }
 
 .image--6 {
-  -webkit-animation: shake 56s 6s linear infinite;
-  animation: shake 56s 6s linear infinite; }
+  -webkit-animation: shake 45s 11s linear infinite;
+  animation: shake 45s 11s linear infinite; }
 
 .mask--6 {
-  -webkit-animation: shake 41s 5s linear infinite;
-  animation: shake 41s 5s linear infinite; }
+  -webkit-animation: shake 49s 12s linear infinite;
+  animation: shake 49s 12s linear infinite; }
 
 .image--7 {
-  -webkit-animation: shake 55s 9s linear infinite;
-  animation: shake 55s 9s linear infinite; }
+  -webkit-animation: shake 48s 6s linear infinite;
+  animation: shake 48s 6s linear infinite; }
 
 .mask--7 {
-  -webkit-animation: shake 51s 5s linear infinite;
-  animation: shake 51s 5s linear infinite; }
+  -webkit-animation: shake 37s 8s linear infinite;
+  animation: shake 37s 8s linear infinite; }
 
 .image--8 {
-  -webkit-animation: shake 37s 11s linear infinite;
-  animation: shake 37s 11s linear infinite; }
+  -webkit-animation: shake 47s 11s linear infinite;
+  animation: shake 47s 11s linear infinite; }
 
 .mask--8 {
-  -webkit-animation: shake 41s 8s linear infinite;
-  animation: shake 41s 8s linear infinite; }
+  -webkit-animation: shake 44s 6s linear infinite;
+  animation: shake 44s 6s linear infinite; }
 
 .image--9 {
-  -webkit-animation: shake 40s 11s linear infinite;
-  animation: shake 40s 11s linear infinite; }
+  -webkit-animation: shake 50s 6s linear infinite;
+  animation: shake 50s 6s linear infinite; }
 
 .mask--9 {
-  -webkit-animation: shake 31s 9s linear infinite;
-  animation: shake 31s 9s linear infinite; }
+  -webkit-animation: shake 38s 5s linear infinite;
+  animation: shake 38s 5s linear infinite; }
 
 .image--10 {
-  -webkit-animation: shake 35s 8s linear infinite;
-  animation: shake 35s 8s linear infinite; }
+  -webkit-animation: shake 34s 5s linear infinite;
+  animation: shake 34s 5s linear infinite; }
 
 .mask--10 {
-  -webkit-animation: shake 58s 7s linear infinite;
-  animation: shake 58s 7s linear infinite; }
+  -webkit-animation: shake 44s 6s linear infinite;
+  animation: shake 44s 6s linear infinite; }
 
 .text {
+  font-family: "rockingham", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.77778rem;
   line-height: 2rem;
-  -webkit-animation: shake 39s 6s linear infinite;
-  animation: shake 39s 6s linear infinite; }
+  -webkit-animation: shake 52s 11s linear infinite;
+  animation: shake 52s 11s linear infinite; }
 
 .tspan {
   -webkit-animation: glitch 17s infinite;

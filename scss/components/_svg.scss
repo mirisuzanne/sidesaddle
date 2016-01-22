@@ -115,7 +115,7 @@
 }
 
 .text {
-  @extend %body;
+  @include font-family('body');
   @include font-size(h3);
   animation: shake random(30)+30s random(10)+3s linear infinite;
 }

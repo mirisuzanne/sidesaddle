@@ -156,21 +156,39 @@ b {
 // ---
 
 .art-gallery {
-  background: url('../images/art.jpg') no-repeat scroll;
+  background: url('../images/dance.jpg') no-repeat scroll;
   background-clip: padding-box;
   background-size: cover;
   padding-top: 60vh;
 
   .container {
     background: color('background' ('rgba': .9));
+    border-top: 1px solid color('light');
     padding: size('gutter') size('gutter') size('spacer');
     max-width: 100%;
   }
 
   .art-info {
-    @include font-size('h3', 2);
     margin: 0 auto;
     max-width: size('page');
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    font-style: italic;
+    margin: size('gutter');
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  b {
+    @include font-size('h1');
+    display: inline-block;
   }
 }
 
@@ -256,7 +274,7 @@ b {
 }
 
 .blurb-cite {
-  @extend %boilerplate;
+  @include font-family('boilerplate');
   color: color(light);
 }
 
@@ -276,7 +294,7 @@ b {
   }
 
   .description {
-    @extend %boilerplate;
+    @include font-family('boilerplate');
   }
 }
 
@@ -295,7 +313,7 @@ b {
 // -----------
 
 [role='contentinfo'] {
-  @extend %boilerplate;
+  @include font-family('boilerplate');
   @include font-size(small);
   color: color(light);
   margin: 0 auto;
