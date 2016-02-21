@@ -383,7 +383,7 @@ b {
     padding: 0.66667rem; }
 
 .art-gallery {
-  background: url("../images/dance.jpg") no-repeat scroll;
+  background: url("../images/10-myths.png") no-repeat scroll top left;
   background-clip: padding-box;
   background-size: cover;
   padding-top: 60vh; }
@@ -401,6 +401,13 @@ b {
     font-style: italic;
     margin: 1.33333rem; }
   .art-gallery h3 {
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(1px 1px 1px 1px);
+    clip-path: inset(1px 1px 1px 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
     text-align: center; }
   .art-gallery b {
     font-size: 3.16667rem;
@@ -600,18 +607,18 @@ b {
     animation: logo-shift linear infinite alternate both;
     mix-blend-mode: multiply; }
   .oddbooks-logo .layer-1 {
-    -webkit-animation-delay: 37.3ms;
-    animation-delay: 37.3ms;
-    -webkit-animation-duration: 113s;
-    animation-duration: 113s;
+    -webkit-animation-delay: 13.2ms;
+    animation-delay: 13.2ms;
+    -webkit-animation-duration: 93s;
+    animation-duration: 93s;
     fill: #cb8129; }
   .oddbooks-logo .layer-2 {
-    -webkit-animation-delay: 373ms;
-    animation-delay: 373ms;
+    -webkit-animation-delay: 134ms;
+    animation-delay: 134ms;
     -webkit-animation-direction: alternate-reverse;
     animation-direction: alternate-reverse;
-    -webkit-animation-duration: 98s;
-    animation-duration: 98s;
+    -webkit-animation-duration: 108s;
+    animation-duration: 108s;
     fill: #b32356; }
 
 @-webkit-keyframes blur {
@@ -773,91 +780,91 @@ b {
   animation: blur 21s 3s ease infinite; }
 
 .image--1 {
+  -webkit-animation: shake 46s 13s linear infinite;
+  animation: shake 46s 13s linear infinite; }
+
+.mask--1 {
+  -webkit-animation: shake 53s 5s linear infinite;
+  animation: shake 53s 5s linear infinite; }
+
+.image--2 {
+  -webkit-animation: shake 45s 13s linear infinite;
+  animation: shake 45s 13s linear infinite; }
+
+.mask--2 {
+  -webkit-animation: shake 57s 10s linear infinite;
+  animation: shake 57s 10s linear infinite; }
+
+.image--3 {
+  -webkit-animation: shake 57s 13s linear infinite;
+  animation: shake 57s 13s linear infinite; }
+
+.mask--3 {
+  -webkit-animation: shake 32s 5s linear infinite;
+  animation: shake 32s 5s linear infinite; }
+
+.image--4 {
+  -webkit-animation: shake 41s 5s linear infinite;
+  animation: shake 41s 5s linear infinite; }
+
+.mask--4 {
+  -webkit-animation: shake 34s 12s linear infinite;
+  animation: shake 34s 12s linear infinite; }
+
+.image--5 {
   -webkit-animation: shake 31s 10s linear infinite;
   animation: shake 31s 10s linear infinite; }
 
-.mask--1 {
-  -webkit-animation: shake 59s 13s linear infinite;
-  animation: shake 59s 13s linear infinite; }
-
-.image--2 {
-  -webkit-animation: shake 45s 9s linear infinite;
-  animation: shake 45s 9s linear infinite; }
-
-.mask--2 {
-  -webkit-animation: shake 31s 12s linear infinite;
-  animation: shake 31s 12s linear infinite; }
-
-.image--3 {
-  -webkit-animation: shake 57s 12s linear infinite;
-  animation: shake 57s 12s linear infinite; }
-
-.mask--3 {
-  -webkit-animation: shake 34s 8s linear infinite;
-  animation: shake 34s 8s linear infinite; }
-
-.image--4 {
-  -webkit-animation: shake 41s 11s linear infinite;
-  animation: shake 41s 11s linear infinite; }
-
-.mask--4 {
-  -webkit-animation: shake 46s 8s linear infinite;
-  animation: shake 46s 8s linear infinite; }
-
-.image--5 {
-  -webkit-animation: shake 51s 8s linear infinite;
-  animation: shake 51s 8s linear infinite; }
-
 .mask--5 {
-  -webkit-animation: shake 51s 13s linear infinite;
-  animation: shake 51s 13s linear infinite; }
+  -webkit-animation: shake 35s 8s linear infinite;
+  animation: shake 35s 8s linear infinite; }
 
 .image--6 {
-  -webkit-animation: shake 45s 11s linear infinite;
-  animation: shake 45s 11s linear infinite; }
+  -webkit-animation: shake 52s 10s linear infinite;
+  animation: shake 52s 10s linear infinite; }
 
 .mask--6 {
-  -webkit-animation: shake 49s 12s linear infinite;
-  animation: shake 49s 12s linear infinite; }
+  -webkit-animation: shake 36s 11s linear infinite;
+  animation: shake 36s 11s linear infinite; }
 
 .image--7 {
-  -webkit-animation: shake 48s 6s linear infinite;
-  animation: shake 48s 6s linear infinite; }
+  -webkit-animation: shake 42s 4s linear infinite;
+  animation: shake 42s 4s linear infinite; }
 
 .mask--7 {
-  -webkit-animation: shake 37s 8s linear infinite;
-  animation: shake 37s 8s linear infinite; }
+  -webkit-animation: shake 39s 8s linear infinite;
+  animation: shake 39s 8s linear infinite; }
 
 .image--8 {
-  -webkit-animation: shake 47s 11s linear infinite;
-  animation: shake 47s 11s linear infinite; }
+  -webkit-animation: shake 39s 8s linear infinite;
+  animation: shake 39s 8s linear infinite; }
 
 .mask--8 {
-  -webkit-animation: shake 44s 6s linear infinite;
-  animation: shake 44s 6s linear infinite; }
+  -webkit-animation: shake 55s 13s linear infinite;
+  animation: shake 55s 13s linear infinite; }
 
 .image--9 {
-  -webkit-animation: shake 50s 6s linear infinite;
-  animation: shake 50s 6s linear infinite; }
+  -webkit-animation: shake 50s 13s linear infinite;
+  animation: shake 50s 13s linear infinite; }
 
 .mask--9 {
-  -webkit-animation: shake 38s 5s linear infinite;
-  animation: shake 38s 5s linear infinite; }
+  -webkit-animation: shake 38s 12s linear infinite;
+  animation: shake 38s 12s linear infinite; }
 
 .image--10 {
-  -webkit-animation: shake 34s 5s linear infinite;
-  animation: shake 34s 5s linear infinite; }
+  -webkit-animation: shake 44s 10s linear infinite;
+  animation: shake 44s 10s linear infinite; }
 
 .mask--10 {
-  -webkit-animation: shake 44s 6s linear infinite;
-  animation: shake 44s 6s linear infinite; }
+  -webkit-animation: shake 54s 4s linear infinite;
+  animation: shake 54s 4s linear infinite; }
 
 .text {
   font-family: "rockingham", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.77778rem;
   line-height: 2rem;
-  -webkit-animation: shake 52s 11s linear infinite;
-  animation: shake 52s 11s linear infinite; }
+  -webkit-animation: shake 54s 13s linear infinite;
+  animation: shake 54s 13s linear infinite; }
 
 .tspan {
   -webkit-animation: glitch 17s infinite;
