@@ -11,7 +11,7 @@ after:
 Riding SideSaddle*
 ==================
 
-`(Eric) Miriam Suzanne`_
+`Miriam (née Eric) Suzanne`_
 *a novel*
 
-.. _`(Eric) Miriam Suzanne`: http://miriamsuzanne.com/
+.. _`Miriam (née Eric) Suzanne`: http://miriamsuzanne.com/

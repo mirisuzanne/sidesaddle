@@ -156,7 +156,7 @@ b {
 // ---
 
 .art-gallery {
-  background: url('../images/dance.jpg') no-repeat scroll;
+  background: url('../images/10-myths.png') no-repeat scroll top left;
   background-clip: padding-box;
   background-size: cover;
   padding-top: 60vh;
@@ -183,6 +183,7 @@ b {
   }
 
   h3 {
+    @include is-hidden;
     text-align: center;
   }
 
