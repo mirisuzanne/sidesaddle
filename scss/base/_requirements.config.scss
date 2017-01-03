@@ -1,9 +1,8 @@
 // Sass Requirements
 // =================
 
+@import '../../node_modules/mathsass/dist/math';
 @import '../../node_modules/accoutrement-color/sass/color';
-@import '../../node_modules/accoutrement-fonts/sass/fonts';
+@import '../../node_modules/accoutrement-type/sass/type';
 @import '../../node_modules/accoutrement-layout/sass/layout';
-@import '../../node_modules/accoutrement-pseudo/sass/pseudo-elements';
 @import '../../node_modules/accoutrement-scale/sass/scale';
-@import '../../node_modules/accoutrement-queries/sass/queries';

@@ -16,7 +16,7 @@
   padding: size(gutter)*4 size(gutter);
   transition: all 300ms;
 
-  @include at(45em) {
+  @include above(45em) {
     padding: 18vh 0;
   }
 }
@@ -74,7 +74,7 @@ b {
 // ----
 
 .page {
-  @include at(45em) {
+  @include above(45em) {
     background: url('../images/cover.jpg') no-repeat scroll top right;
     background-size: auto 100%;
 
@@ -135,8 +135,31 @@ b {
 // Tour
 // ----
 
+.tour {
+  background: url('../images/resistence.jpg') no-repeat right bottom;
+  background-clip: padding-box;
+  background-size: cover;
+
+  .container {
+    max-width: 700px;
+  }
+
+  h3 {
+    @include relative-font(4vw, h3);
+  }
+
+  .tour-info {
+    background: color('background' ('rgba': .9));
+    padding: size('gutter');
+  }
+}
+
+
+// Art
+// ---
+
 .music {
-  background: url('../images/ums.jpg') no-repeat scroll bottom;
+  background: url('../images/tg-spring-13.jpg') no-repeat scroll bottom;
   background-clip: padding-box;
   background-size: cover;
 
@@ -152,8 +175,8 @@ b {
 }
 
 
-// Art
-// ---
+// Theater
+// -------
 
 .art-gallery {
   background: url('../images/10-myths.png') no-repeat scroll top left;
@@ -288,7 +311,7 @@ b {
   background-size: cover;
 
   .container {
-    @include at(45em) {
+    @include above(45em) {
       margin: 0 10% 0 40%;
       padding: 25vh size(gutter);
     }

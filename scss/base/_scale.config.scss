@@ -3,31 +3,30 @@
 
 $base-size: 18px;
 
-$ratio: (4/3);
+$ratios: (
+  'r': 4/3,
+);
 
 $sizes: (
-  normal: 18px,
-  rhythm: 1,
+  root: $base-size,
+  normal: root,
+  rhythm: normal (r: 1),
 
-  h1: 4,
-  h2: 3,
-  h3: 2,
+  h1: normal (r: 4),
+  h2: normal (r: 3),
+  h3: normal (r: 2),
 
-  small: -1,
+  small: normal (r: -1),
 
   gutter: rhythm,
-  spacer: 3,
+  spacer: normal (r: 3),
 
-  corners: -2,
+  corners: normal (r: -2),
   page: 45rem,
-);
 
-$meta-sizes: (
-  shim: size(gutter)/2,
-  half-shim: size(gutter)/4,
+  shim: gutter (linear: 0.5),
+  half-shim: gutter (linear: 0.25),
 );
-
-$sizes: map-merge($sizes, $meta-sizes);
 
 
 @mixin relative-font(
@@ -37,11 +36,17 @@ $sizes: map-merge($sizes, $meta-sizes);
   $edge: min-width
 ) {
   font-size: $relative;
-  line-height: $relative * $ratio;
+  line-height: $relative * map-get($ratios, r);
 
-  $context: size($fixed, px) / ($relative / 100vw) / 16px + 'em';
+  $context: size($fixed, px) / ($relative / 100vw) / 16px * 1em;
 
-  @include at($edge $context) {
-    @include font-size($fixed, $lines);
+  @if $edge == min-width {
+    @include above($context) {
+      @include font-size($fixed, $lines);
+    }
+  } @else {
+    @include below($context) {
+      @include font-size($fixed, $lines);
+    }
   }
 }
